@@ -1,3 +1,4 @@
+. ~/.config/fish/aliases.fish
 set -x PATH /home/linuxbrew/.linuxbrew/bin $PATH
 set -x PATH /home/takumi/go/bin $PATH
 set -x PATH ~/.local/bin $PATH
