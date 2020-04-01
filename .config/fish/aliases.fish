@@ -7,6 +7,10 @@ function commit --description 'alias commit=git commit'
 	git commit $argv;
 end
 
+function fetch --description 'alias fetch=git fetch'
+	git fetch $argv;
+end
+
 function fixup --description 'alias fixup=git commit --amend --no-edit'
 	git commit --amend --no-edit $argv;
 end
