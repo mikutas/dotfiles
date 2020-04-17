@@ -1,8 +1,9 @@
 . ~/.config/fish/aliases.fish
 set -x PATH /home/linuxbrew/.linuxbrew/bin $PATH
-set -x PATH /home/takumi/go/bin $PATH
 set -x PATH ~/.local/bin $PATH
 set -x PATH $PATH $HOME/.krew/bin
+set -x GOPATH (go env GOPATH)
+set -x PATH $GOPATH/bin $PATH
 set GHQ_SELECTOR peco
 set -g fish_prompt_pwd_dir_length 0
 set -g theme_project_dir_length 0
