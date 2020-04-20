@@ -4,6 +4,7 @@ set -x PATH ~/.local/bin $PATH
 set -x PATH $PATH $HOME/.krew/bin
 set -x GOPATH (go env GOPATH)
 set -x PATH $GOPATH/bin $PATH
+set -x GPG_TTY (tty)
 set GHQ_SELECTOR peco
 set -g fish_prompt_pwd_dir_length 0
 set -g theme_project_dir_length 0
