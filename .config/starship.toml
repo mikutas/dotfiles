@@ -1,0 +1,6 @@
+[directory]
+truncation_length = 8
+[aws]
+disabled = true
+[kubernetes]
+disabled = false

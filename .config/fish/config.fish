@@ -17,3 +17,5 @@ set -g theme_newline_cursor yes
 set -g theme_show_exit_status yes
 set -g theme_title_display_path no
 set -g theme_title_display_process yes
+# starship
+#starship init fish | source
