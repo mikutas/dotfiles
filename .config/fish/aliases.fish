@@ -3,6 +3,10 @@ function add --description 'alias add=git add'
 	git add $argv;
 end
 
+function amend --description 'alias amend=git commit --amend'
+	git commit --amend $argv;
+end
+
 function commit --description 'alias commit=git commit'
 	git commit $argv;
 end
