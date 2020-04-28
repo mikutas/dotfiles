@@ -9,8 +9,9 @@ set -x PATH $GOPATH/bin $PATH
 set -x GPG_TTY (tty)
 # fish-ghq
 set -g GHQ_SELECTOR peco
-# bobthefish
+# prompt
 set -g fish_prompt_pwd_dir_length 0
+# bobthefish
 set -g theme_project_dir_length 0
 set -g theme_display_git_ahead_verbose yes
 set -g theme_display_git_stashed_verbose yes
@@ -18,7 +19,11 @@ set -g theme_display_git_master_branch yes
 set -g theme_display_k8s_context yes
 set -g theme_newline_cursor yes
 set -g theme_show_exit_status yes
-set -g theme_title_display_path no
-set -g theme_title_display_process yes
 # starship
 #starship init fish | source
+
+function fish_title
+	set base (basename (pwd))
+	set dir (basename (dirname (pwd)))
+	echo "$dir/$base"
+end
