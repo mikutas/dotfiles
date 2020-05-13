@@ -39,6 +39,11 @@ function lg --description 'alias lg=lazygit'
 	lazygit  $argv;
 end
 
+# exa
+function ls --description 'alias ls exa'
+	exa  $argv;
+end
+
 # Docker
 function dcp --description 'alias dcp docker-compose'
 	docker-compose  $argv;
@@ -63,10 +68,6 @@ end
 
 function ktx --description 'alias ktx=kubectx'
 	kubectx  $argv;
-end
-
-function ls --description 'alias ls exa'
-	exa  $argv;
 end
 
 # AWS
