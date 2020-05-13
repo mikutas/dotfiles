@@ -70,6 +70,10 @@ function ktx --description 'alias ktx=kubectx'
 	kubectx  $argv;
 end
 
+function kres
+	kubectl get node --no-headers -o custom-columns=NAME:.metadata.name | xargs -L 1 kubectl describe node | grep Allocated -A 5 | grep -ve Event -ve Allocated -ve percent -ve --
+end
+
 # AWS
 function mfad --description 'alias mfad aws-mfa --profile dev'
 	aws-mfa --profile dev $argv;
