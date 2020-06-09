@@ -20,7 +20,7 @@ set -g theme_display_k8s_context yes
 set -g theme_newline_cursor yes
 set -g theme_show_exit_status yes
 # starship
-#starship init fish | source
+starship init fish | source
 
 function fish_title
 	set base (basename (pwd))
