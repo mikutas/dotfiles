@@ -91,3 +91,7 @@ function mfap --description 'alias mfap aws-mfa --profile prod'
 	aws-mfa --profile prod $argv;
 end
 
+# todoist
+function todo --description 'alias todo todoist sync && todoist list --filter "(overdue | today)"'
+	todoist sync && todoist list --filter "(overdue | today)";
+end
