@@ -59,7 +59,7 @@ function k --description 'alias k=kubectl'
 end
 
 function k14 --description 'alias k=kubectl'
-	kubectl_v1.14.6  $argv;
+	kubectl_v1.14.9  $argv;
 end
 
 function k16 --description 'alias k=kubectl'
