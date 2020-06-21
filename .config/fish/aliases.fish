@@ -36,21 +36,21 @@ function stash --description 'alias stash git stash'
 end
 
 function lg --description 'alias lg=lazygit'
-	lazygit  $argv;
+	lazygit $argv;
 end
 
 # exa
 function ls --description 'alias ls exa'
-	exa  $argv;
+	exa $argv;
 end
 
 # Docker
 function dcp --description 'alias dcp docker-compose'
-	docker-compose  $argv;
+	docker-compose $argv;
 end
 
 function lzd --description 'alias lzd=lazydocker'
-	lazydocker  $argv;
+	lazydocker $argv;
 end
 
 # Kubernetes
@@ -59,15 +59,15 @@ function dl-kubectl
 end
 
 function k --description 'alias k=kubectl'
-	kubectl  $argv;
+	kubectl $argv;
 end
 
 function k14 --description 'alias k=kubectl'
-	kubectl_v1.14.9  $argv;
+	kubectl_v1.14.9 $argv;
 end
 
 function k16 --description 'alias k=kubectl'
-	kubectl_v1.16.8  $argv;
+	kubectl_v1.16.8 $argv;
 end
 
 function kd --description 'alias kd kubectl describe'
