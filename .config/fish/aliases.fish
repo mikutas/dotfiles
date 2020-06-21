@@ -54,6 +54,10 @@ function lzd --description 'alias lzd=lazydocker'
 end
 
 # Kubernetes
+function dl-kubectl
+	curl -LO https://storage.googleapis.com/kubernetes-release/release/$argv/bin/linux/amd64/kubectl ;
+end
+
 function k --description 'alias k=kubectl'
 	kubectl  $argv;
 end
