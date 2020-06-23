@@ -42,6 +42,9 @@ end
 # exa
 function ls --description 'alias ls exa'
 	exa $argv;
+	if test $status -ne 0;
+	  /usr/bin/ls $argv;
+	end
 end
 
 # Docker
