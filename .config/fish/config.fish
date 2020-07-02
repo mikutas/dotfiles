@@ -25,5 +25,9 @@ starship init fish | source
 function fish_title
 	set base (basename (pwd))
 	set dir (basename (dirname (pwd)))
-	echo "$dir/$base"
+	if test $dir = "/";
+		echo $base
+	else
+		echo "$dir/$base"
+	end
 end
