@@ -3,6 +3,7 @@
 set -x PATH /home/linuxbrew/.linuxbrew/bin $PATH
 set -x PATH ~/.local/bin $PATH
 set -x PATH $PATH $HOME/.krew/bin
+set -x PATH ~/.asdf/shims $PATH
 set -x GOPATH (go env GOPATH)
 set -x PATH $GOPATH/bin $PATH
 # https://jlk.fjfi.cvut.cz/arch/manpages/man/gpg-agent.1.html
