@@ -2,7 +2,7 @@
 # PATH
 set -x PATH /home/linuxbrew/.linuxbrew/bin $PATH
 set -x PATH ~/.local/bin $PATH
-set -x PATH $PATH $HOME/.krew/bin
+set -x PATH ~/.krew/bin $PATH
 set -x PATH ~/.asdf/shims $PATH
 set -x GOPATH (go env GOPATH)
 set -x PATH $GOPATH/bin $PATH
