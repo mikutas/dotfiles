@@ -67,11 +67,11 @@ function k --description 'alias k=kubectl'
 end
 
 function kd --description 'alias kd kubectl describe'
-	kubectl describe $argv;
+	k describe $argv;
 end
 
 function kg --description 'alias kg kubectl get'
-	kubectl get $argv;
+	k get $argv;
 end
 
 function ktx --description 'alias ktx=kubectx'
