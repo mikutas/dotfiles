@@ -35,6 +35,10 @@ function stash --description 'alias stash git stash'
 	git stash $argv;
 end
 
+function pull --description 'alias pull git pull'
+	git pull --rebase --prune
+end
+
 function lg --description 'alias lg=lazygit'
 	lazygit $argv;
 end
