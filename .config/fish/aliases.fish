@@ -47,7 +47,7 @@ end
 function ls --description 'alias ls exa'
 	exa $argv;
 	if test $status -ne 0;
-	  /usr/bin/ls $argv;
+		/usr/bin/ls $argv;
 	end
 end
 
