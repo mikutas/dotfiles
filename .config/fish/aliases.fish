@@ -79,10 +79,8 @@ function kubectl
 		$KUBE1_15 $argv;
 	else if test $KUBE_CURRENT_CONTEXT = "sandbox";
 		$KUBE1_17 $argv;
-	else if test $KUBE_CURRENT_CONTEXT = "kind-kind";
-		$KUBE1_18 $argv;
 	else
-		$KUBE1_16 $argv;
+		$KUBE1_18 $argv;
 	end
 end
 
