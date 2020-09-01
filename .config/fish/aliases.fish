@@ -61,6 +61,28 @@ function lzd --description 'alias lzd=lazydocker'
 end
 
 # Kubernetes
+function kubectl
+	set KUBE1_15 ~/.asdf/installs/kubectl/1.15.12/bin/kubectl
+	set KUBE1_16 ~/.asdf/installs/kubectl/1.16.14/bin/kubectl
+	set KUBE1_17 ~/.asdf/installs/kubectl/1.17.11/bin/kubectl
+
+	set KUBE_CURRENT_CONTEXT ($KUBE1_16 config current-context)
+
+	if test (string match "*dev-20200513" $KUBE_CURRENT_CONTEXT);
+		$KUBE1_17 $argv;
+	else if test (string match "*prod-20200707" $KUBE_CURRENT_CONTEXT);
+		$KUBE1_16 $argv;
+	else if test (string match "*dev" $KUBE_CURRENT_CONTEXT);
+		$KUBE1_15 $argv;
+	else if test (string match "*prod" $KUBE_CURRENT_CONTEXT);
+		$KUBE1_15 $argv;
+	else if test $KUBE_CURRENT_CONTEXT = "sandbox";
+		$KUBE1_17 $argv;
+	else
+		$KUBE1_16 $argv;
+	end
+end
+
 function k --description 'alias k=kubectl'
 	kubectl $argv;
 end
