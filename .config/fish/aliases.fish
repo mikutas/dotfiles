@@ -65,8 +65,9 @@ function kubectl
 	set KUBE1_15 ~/.asdf/installs/kubectl/1.15.12/bin/kubectl
 	set KUBE1_16 ~/.asdf/installs/kubectl/1.16.14/bin/kubectl
 	set KUBE1_17 ~/.asdf/installs/kubectl/1.17.11/bin/kubectl
+	set KUBE1_18 ~/.asdf/installs/kubectl/1.18.8/bin/kubectl
 
-	set KUBE_CURRENT_CONTEXT ($KUBE1_16 config current-context)
+	set KUBE_CURRENT_CONTEXT ($KUBE1_18 config current-context)
 
 	if test (string match "*dev-20200513" $KUBE_CURRENT_CONTEXT);
 		$KUBE1_17 $argv;
@@ -78,6 +79,8 @@ function kubectl
 		$KUBE1_15 $argv;
 	else if test $KUBE_CURRENT_CONTEXT = "sandbox";
 		$KUBE1_17 $argv;
+	else if test $KUBE_CURRENT_CONTEXT = "kind-kind";
+		$KUBE1_18 $argv;
 	else
 		$KUBE1_16 $argv;
 	end
