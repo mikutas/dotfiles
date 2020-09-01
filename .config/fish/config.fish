@@ -6,6 +6,8 @@ set -x PATH ~/.krew/bin $PATH
 set -x PATH ~/.asdf/shims $PATH
 set -x GOPATH (go env GOPATH)
 set -x PATH $GOPATH/bin $PATH
+# kubectl diff
+set -x KUBECTL_EXTERNAL_DIFF colordiff
 # https://jlk.fjfi.cvut.cz/arch/manpages/man/gpg-agent.1.html
 set -x GPG_TTY (tty)
 # fish-ghq
