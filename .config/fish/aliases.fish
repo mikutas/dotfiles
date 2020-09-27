@@ -64,8 +64,8 @@ end
 function kubectl
 	set KUBE1_15 ~/.asdf/installs/kubectl/1.15.12/bin/kubectl
 	set KUBE1_16 ~/.asdf/installs/kubectl/1.16.15/bin/kubectl
-	set KUBE1_17 ~/.asdf/installs/kubectl/1.17.11/bin/kubectl
-	set KUBE1_18 ~/.asdf/installs/kubectl/1.18.8/bin/kubectl
+	set KUBE1_17 ~/.asdf/installs/kubectl/1.17.12/bin/kubectl
+	set KUBE1_18 ~/.asdf/installs/kubectl/1.18.9/bin/kubectl
 
 	set KUBE_CURRENT_CONTEXT ($KUBE1_18 config current-context)
 
