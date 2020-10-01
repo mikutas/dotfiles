@@ -74,7 +74,7 @@ function kubectl
 	else if test (string match "*prod-20200707" $KUBE_CURRENT_CONTEXT);
 		$KUBE1_16 $argv;
 	else if test (string match "*dev" $KUBE_CURRENT_CONTEXT);
-		$KUBE1_15 $argv;
+		$KUBE1_16 $argv;
 	else if test (string match "*prod" $KUBE_CURRENT_CONTEXT);
 		$KUBE1_15 $argv;
 	else if test $KUBE_CURRENT_CONTEXT = "sandbox";
