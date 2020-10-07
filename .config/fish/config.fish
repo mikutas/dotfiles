@@ -17,6 +17,7 @@ set -g GHQ_SELECTOR peco
 # prompt
 set -g fish_prompt_pwd_dir_length 0
 # bobthefish
+set -g theme_display_date no
 set -g theme_project_dir_length 0
 set -g theme_display_git_ahead_verbose yes
 set -g theme_display_git_stashed_verbose yes
