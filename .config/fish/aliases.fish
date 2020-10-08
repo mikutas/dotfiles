@@ -1,50 +1,50 @@
 # Git
-function add --description 'alias add=git add'
+function add
 	git add $argv;
 end
 
-function amend --description 'alias amend=git commit --amend'
+function amend
 	git commit --amend $argv;
 end
 
-function commit --description 'alias commit=git commit'
+function commit
 	git commit $argv;
 end
 
-function fetch --description 'alias fetch=git fetch'
+function fetch
 	git fetch $argv;
 end
 
-function fixup --description 'alias fixup=git commit --amend --no-edit'
+function fixup
 	git commit --amend --no-edit $argv;
 end
 
-function gl --description 'alias gl=git log'
+function gl
 	git log $argv;
 end
 
-function push --description 'alias push=git push'
+function push
 	git push $argv;
 end
 
-function rebase --description 'alias rebase git rebase'
+function rebase
 	git rebase $argv;
 end
 
-function stash --description 'alias stash git stash'
+function stash
 	git stash $argv;
 end
 
-function pull --description 'alias pull git pull'
+function pull
 	git pull --rebase --prune
 end
 
-function lg --description 'alias lg=lazygit'
+function lg
 	lazygit $argv;
 end
 
 # exa
-function ls --description 'alias ls exa'
+function ls
 	exa $argv;
 	if test $status -ne 0;
 		/usr/bin/ls $argv;
@@ -52,11 +52,11 @@ function ls --description 'alias ls exa'
 end
 
 # Docker
-function dcp --description 'alias dcp docker-compose'
+function dcp
 	docker-compose $argv;
 end
 
-function lzd --description 'alias lzd=lazydocker'
+function lzd
 	lazydocker $argv;
 end
 
@@ -84,32 +84,32 @@ function kubectl
 	end
 end
 
-function k --description 'alias k=kubectl'
+function k
 	kubectl $argv;
 end
 
-function kd --description 'alias kd kubectl describe'
+function kd
 	k describe $argv;
 end
 
-function kg --description 'alias kg kubectl get'
+function kg
 	k get $argv;
 end
 
-function ktx --description 'alias ktx=kubectx'
+function ktx
 	kubectx  $argv;
 end
 
 # AWS
-function mfad --description 'alias mfad aws-mfa --profile dev'
+function mfad
 	aws-mfa --profile dev $argv;
 end
 
-function mfap --description 'alias mfap aws-mfa --profile prod'
+function mfap
 	aws-mfa --profile prod $argv;
 end
 
 # todoist
-function todo --description 'alias todo todoist sync && todoist list --filter "(overdue | today)"'
+function todo
 	todoist sync && todoist list --filter "(overdue | today)";
 end
