@@ -1,9 +1,9 @@
 # Git
-function add
+function add -w 'git add'
 	git add $argv;
 end
 
-function amend
+function amend -w 'git commit --amend'
 	git commit --amend $argv;
 end
 
@@ -11,35 +11,35 @@ function commit
 	git commit $argv;
 end
 
-function fetch
+function fetch -w 'git fetch'
 	git fetch $argv;
 end
 
-function fixup
+function fixup -w 'git commit --amend --no-edit'
 	git commit --amend --no-edit $argv;
 end
 
-function gl
+function gl -w 'git log'
 	git log $argv;
 end
 
-function push
+function push -w 'git push'
 	git push $argv;
 end
 
-function rebase
+function rebase -w 'git rebase'
 	git rebase $argv;
 end
 
-function stash
+function stash -w 'git stash'
 	git stash $argv;
 end
 
-function pull
+function pull -w 'git pull --rebase --prune'
 	git pull --rebase --prune
 end
 
-function lg
+function lg -w 'lazygit'
 	lazygit $argv;
 end
 
@@ -52,11 +52,11 @@ function ls
 end
 
 # Docker
-function dcp
+function dcp -w 'docker-compose'
 	docker-compose $argv;
 end
 
-function lzd
+function lzd -w 'lazydocker'
 	lazydocker $argv;
 end
 
@@ -84,19 +84,19 @@ function kubectl
 	end
 end
 
-function k
+function k -w 'kubectl'
 	kubectl $argv;
 end
 
-function kd
+function kd -w 'kubectl describe'
 	k describe $argv;
 end
 
-function kg
+function kg -w 'kubectl get'
 	k get $argv;
 end
 
-function ktx
+function ktx -w 'kubectx'
 	kubectx  $argv;
 end
 
@@ -110,6 +110,6 @@ function mfap
 end
 
 # todoist
-function todo
+function todo -w 'todoist sync && todoist list --filter "(overdue | today)"'
 	todoist sync && todoist list --filter "(overdue | today)";
 end
