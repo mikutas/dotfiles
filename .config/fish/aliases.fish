@@ -66,6 +66,7 @@ function kubectl
 	set KUBE1_16 ~/.asdf/installs/kubectl/1.16.15/bin/kubectl
 	set KUBE1_17 ~/.asdf/installs/kubectl/1.17.13/bin/kubectl
 	set KUBE1_18 ~/.asdf/installs/kubectl/1.18.10/bin/kubectl
+	set KUBE1_19 ~/.asdf/installs/kubectl/1.19.3/bin/kubectl
 
 	set KUBE_CURRENT_CONTEXT ($KUBE1_18 config current-context)
 
@@ -80,7 +81,7 @@ function kubectl
 	else if test $KUBE_CURRENT_CONTEXT = "sandbox";
 		$KUBE1_18 $argv;
 	else
-		$KUBE1_18 $argv;
+		$KUBE1_19 $argv;
 	end
 end
 
