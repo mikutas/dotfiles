@@ -68,7 +68,7 @@ function kubectl
 	set KUBE1_18 ~/.asdf/installs/kubectl/1.18.10/bin/kubectl
 	set KUBE1_19 ~/.asdf/installs/kubectl/1.19.3/bin/kubectl
 
-	set KUBE_CURRENT_CONTEXT ($KUBE1_18 config current-context)
+	set KUBE_CURRENT_CONTEXT ($KUBE1_19 config current-context)
 
 	if test (string match "*dev-20200513" $KUBE_CURRENT_CONTEXT);
 		$KUBE1_18 $argv;
