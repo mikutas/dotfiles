@@ -3,9 +3,11 @@
 . ~/.config/fish/github.fish
 # PATH
 set -x PATH /home/linuxbrew/.linuxbrew/bin $PATH
+set -g fish_user_paths "/home/linuxbrew/.linuxbrew/sbin" $fish_user_paths
 set -x PATH ~/.local/bin $PATH
 set -x PATH ~/.krew/bin $PATH
 set -x PATH ~/.asdf/shims $PATH
+set -x PATH /usr/local/go/bin $PATH
 set -x GOPATH (go env GOPATH)
 set -x PATH $GOPATH/bin $PATH
 # kubectl diff
