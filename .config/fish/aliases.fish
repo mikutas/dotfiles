@@ -122,10 +122,10 @@ end
 
 # go
 function remove-go
-	rm -r /usr/local/go
+	sudo rm -r /usr/local/go
 end
 
 function install-go
 	curl -LO https://golang.org/dl/go$argv.linux-amd64.tar.gz
-	tar -C /usr/local -xzf go$argv.linux-amd64.tar.gz
+	sudo tar -C /usr/local -xzf go$argv.linux-amd64.tar.gz
 end
