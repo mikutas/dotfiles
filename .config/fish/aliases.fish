@@ -85,8 +85,6 @@ function kubectl
 		$KUBE1_16 $argv;
 	else if test (string match "*prod" $KUBE_CURRENT_CONTEXT);
 		$KUBE1_15 $argv;
-	else if test $KUBE_CURRENT_CONTEXT = "sandbox";
-		$KUBE1_18 $argv;
 	else
 		$KUBE1_19 $argv;
 	end
