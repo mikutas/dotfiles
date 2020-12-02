@@ -43,6 +43,13 @@ function lg -w 'lazygit'
 	lazygit $argv;
 end
 
+# GitHub
+function gh-repo-fork
+	gh repo fork
+	set repo (basename (pwd))
+	git remote add tkms0106 git@github.com:tkms0106/$repo
+end
+
 # exa
 function ls
 	exa $argv;
