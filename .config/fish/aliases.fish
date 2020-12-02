@@ -115,11 +115,6 @@ function todo -w 'todoist sync && todoist list --filter "(overdue | today)"'
 	todoist sync && todoist list --filter "(overdue | today)";
 end
 
-# gojq
-function jq -w 'gojq'
-	gojq $argv;
-end
-
 # go
 function remove-go
 	sudo rm -r /usr/local/go
