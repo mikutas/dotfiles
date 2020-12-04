@@ -24,9 +24,15 @@ function fish_title
 	set base (basename (pwd))
 	set dir (basename (dirname (pwd)))
 	if test $dir = "/";
-		echo $base
+		set title $base
 	else
-		echo "$dir/$base"
+		set title "$dir/$base"
+	end
+	#echo "$argv[1] | $title"
+	if test "$argv[1]" != "";
+		echo $argv
+	else
+		echo $title
 	end
 end
 
