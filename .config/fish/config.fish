@@ -11,6 +11,7 @@ set -x PATH /usr/local/go/bin $PATH
 set -x GOPATH (go env GOPATH)
 set -x PATH $GOPATH/bin $PATH
 set -x PATH /usr/local/kubebuilder/bin $PATH
+set -x PATH ~/.linkerd2/bin $PATH
 # kubectl diff
 set -x KUBECTL_EXTERNAL_DIFF colordiff
 # https://jlk.fjfi.cvut.cz/arch/manpages/man/gpg-agent.1.html
