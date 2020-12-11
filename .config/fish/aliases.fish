@@ -73,19 +73,19 @@ function kubectl
 	set KUBE1_16 ~/.asdf/installs/kubectl/1.16.15/bin/kubectl
 	set KUBE1_17 ~/.asdf/installs/kubectl/1.17.14/bin/kubectl
 	set KUBE1_18 ~/.asdf/installs/kubectl/1.18.12/bin/kubectl
-	set KUBE1_19 ~/.asdf/installs/kubectl/1.19.4/bin/kubectl
+	set KUBE1_19 ~/.asdf/installs/kubectl/1.19.5/bin/kubectl
 
-	set KUBE_CURRENT_CONTEXT ($KUBE1_19 config current-context)
+	set VERSION ($KUBE1_19 version --short | tail -n 1 | sed -r "s/^Server Version: v([0-9].[0-9][0-9]).[0-9]/\1/")
 
-	if test (string match "*dev-20200513" $KUBE_CURRENT_CONTEXT);
-		$KUBE1_18 $argv;
-	else if test (string match "*prod-20200707" $KUBE_CURRENT_CONTEXT);
-		$KUBE1_17 $argv;
-	else if test (string match "*dev" $KUBE_CURRENT_CONTEXT);
-		$KUBE1_16 $argv;
-	else if test (string match "*prod" $KUBE_CURRENT_CONTEXT);
+	if test (string match $VERSION "1.15")
 		$KUBE1_15 $argv;
-	else
+	else if test (string match $VERSION "1.16")
+		$KUBE1_16 $argv;
+	else if test (string match $VERSION "1.17")
+		$KUBE1_17 $argv;
+	else if test (string match $VERSION "1.18")
+		$KUBE1_18 $argv;
+	else if test (string match $VERSION "1.19")
 		$KUBE1_19 $argv;
 	end
 end
