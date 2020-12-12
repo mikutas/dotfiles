@@ -3,6 +3,7 @@ truncation_length = 8
 
 [kubernetes]
 disabled = false
+symbol = "ﴱ "
 
 [aws]
 symbol = " "
