@@ -71,8 +71,8 @@ end
 function kubectl
 	set KUBE1_15 ~/.asdf/installs/kubectl/1.15.12/bin/kubectl
 	set KUBE1_16 ~/.asdf/installs/kubectl/1.16.15/bin/kubectl
-	set KUBE1_17 ~/.asdf/installs/kubectl/1.17.14/bin/kubectl
-	set KUBE1_18 ~/.asdf/installs/kubectl/1.18.12/bin/kubectl
+	set KUBE1_17 ~/.asdf/installs/kubectl/1.17.15/bin/kubectl
+	set KUBE1_18 ~/.asdf/installs/kubectl/1.18.13/bin/kubectl
 	set KUBE1_19 ~/.asdf/installs/kubectl/1.19.5/bin/kubectl
 
 	set VERSION ($KUBE1_19 version --short | tail -n 1 | sed -r "s/^Server Version: v([0-9].[0-9][0-9]).[0-9].*/\1/")
