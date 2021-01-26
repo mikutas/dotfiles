@@ -74,8 +74,9 @@ function kubectl
 	set KUBE1_17 ~/.asdf/installs/kubectl/1.17.15/bin/kubectl
 	set KUBE1_18 ~/.asdf/installs/kubectl/1.18.13/bin/kubectl
 	set KUBE1_19 ~/.asdf/installs/kubectl/1.19.5/bin/kubectl
+	set KUBE1_20 ~/.asdf/installs/kubectl/1.20.2/bin/kubectl
 
-	set VERSION ($KUBE1_19 version --short | tail -n 1 | sed -r "s/^Server Version: v([0-9].[0-9][0-9]).[0-9].*/\1/")
+	set VERSION ($KUBE1_20 version --short | tail -n 1 | sed -r "s/^Server Version: v([0-9].[0-9][0-9]).[0-9].*/\1/")
 
 	if test (string match $VERSION "1.15")
 		$KUBE1_15 $argv;
@@ -87,6 +88,8 @@ function kubectl
 		$KUBE1_18 $argv;
 	else if test (string match $VERSION "1.19")
 		$KUBE1_19 $argv;
+	else if test (string match $VERSION "1.20")
+		$KUBE1_20 $argv;
 	else
 		echo "Debug: VERSION=$VERSION"
 	end
