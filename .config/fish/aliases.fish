@@ -91,7 +91,7 @@ function kubectl
 	else if test (string match $VERSION "1.20")
 		$KUBE1_20 $argv;
 	else
-		echo "Debug: VERSION=$VERSION"
+		echo "Debug: $VERSION"
 	end
 end
 
