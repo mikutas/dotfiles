@@ -131,6 +131,10 @@ function remove-go
 end
 
 function install-go
-	curl -LO https://golang.org/dl/go$argv.linux-amd64.tar.gz
-	sudo tar -C /usr/local -xzf go$argv.linux-amd64.tar.gz
+	if not ls /tmp/go$argv.linux-amd64.tar.gz
+		wget -P /tmp https://golang.org/dl/go$argv.linux-amd64.tar.gz
+	else
+		echo "already exists"
+	end
+	sudo tar -C /usr/local -xzf /tmp/go$argv.linux-amd64.tar.gz
 end
