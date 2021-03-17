@@ -111,6 +111,11 @@ function ktx -w 'kubectx'
 	kubectx  $argv;
 end
 
+# Linkerd
+function install-l5d
+	curl -sL run.linkerd.io/install | env LINKERD2_VERSION=$argv sh
+end
+
 # AWS
 function mfad
 	aws-mfa --profile dev $argv;
