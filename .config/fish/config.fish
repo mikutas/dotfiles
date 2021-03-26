@@ -14,6 +14,8 @@ set -x PATH /usr/local/kubebuilder/bin $PATH
 set -x PATH ~/.linkerd2/bin $PATH
 # kubectl diff
 set -x KUBECTL_EXTERNAL_DIFF colordiff
+# https://github.com/instrumenta/kubernetes-json-schema/issues/26
+set -x KUBEVAL_SCHEMA_LOCATION https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master
 # https://jlk.fjfi.cvut.cz/arch/manpages/man/gpg-agent.1.html
 set -x GPG_TTY (tty)
 # fish-ghq
