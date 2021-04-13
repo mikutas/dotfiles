@@ -116,6 +116,10 @@ function install-l5d
 	curl -sL run.linkerd.io/install | env LINKERD2_VERSION=$argv sh
 end
 
+function l5d-board
+	linkerd viz dashboard $argv;
+end
+
 # AWS
 function mfad
 	aws-mfa --profile dev $argv;
