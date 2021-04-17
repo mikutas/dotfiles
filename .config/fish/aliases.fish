@@ -135,7 +135,7 @@ function todo -w 'todoist sync && todoist list --filter "(overdue | today)"'
 end
 
 # go
-function remove-go
+function uninstall-go
 	sudo rm -r /usr/local/go
 end
 
