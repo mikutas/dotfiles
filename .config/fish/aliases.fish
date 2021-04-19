@@ -112,7 +112,7 @@ function ktx -w 'kubectx'
 end
 
 # Linkerd
-function install-l5d
+function l5d-install
 	curl -sL run.linkerd.io/install | env LINKERD2_VERSION=$argv sh
 end
 
@@ -135,11 +135,11 @@ function todo -w 'todoist sync && todoist list --filter "(overdue | today)"'
 end
 
 # go
-function uninstall-go
+function go-uninstall
 	sudo rm -r /usr/local/go
 end
 
-function install-go
+function go-install
 	if not ls /tmp/go$argv.linux-amd64.tar.gz
 		wget -P /tmp https://golang.org/dl/go$argv.linux-amd64.tar.gz
 	else
