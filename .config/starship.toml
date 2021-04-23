@@ -13,7 +13,7 @@ show_milliseconds = true
 [directory]
 truncation_length = 8
 
-[docker]
+[docker_context]
 symbol = " "
 
 [gcloud]
