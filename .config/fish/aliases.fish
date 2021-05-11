@@ -129,6 +129,17 @@ function mfap
 	aws-mfa --profile prod $argv;
 end
 
+
+function awsdev
+	set -x AWS_VAULT "" # https://github.com/99designs/aws-vault/issues/352
+	aws-vault exec dev
+end
+
+function awsprod
+	set -x AWS_VAULT "" # https://github.com/99designs/aws-vault/issues/352
+	aws-vault exec prod
+end
+
 # todoist
 function todo -w 'todoist sync && todoist list --filter "(overdue | today)"'
 	todoist sync && todoist list --filter "(overdue | today)";

@@ -18,6 +18,9 @@ set -x KUBECTL_EXTERNAL_DIFF colordiff
 set -x KUBEVAL_SCHEMA_LOCATION https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master
 # https://jlk.fjfi.cvut.cz/arch/manpages/man/gpg-agent.1.html
 set -x GPG_TTY (tty)
+# https://github.com/99designs/aws-vault
+set -x AWS_VAULT_BACKEND pass
+set -x AWS_SESSION_TOKEN_TTL 10h
 # fish-ghq
 set -g GHQ_SELECTOR peco
 # starship
