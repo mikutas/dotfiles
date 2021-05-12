@@ -131,7 +131,7 @@ function mfad
 end
 
 function mfap
-	aws-mfa --profile prod $argv;
+	aws-mfa --profile prd $argv;
 end
 
 
