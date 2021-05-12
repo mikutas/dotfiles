@@ -76,6 +76,11 @@ function kubectl
 	set KUBE1_19 ~/.asdf/installs/kubectl/1.19.10/bin/kubectl
 	set KUBE1_20 ~/.asdf/installs/kubectl/1.20.6/bin/kubectl
 
+	if test (string match -r $argv[1] "config|plugin")
+		$KUBE1_20 $argv;
+		return
+	end
+
 	set VERSION ($KUBE1_20 version --short | tail -n 1 | sed -r "s/^Server Version: v([0-9].[0-9][0-9]).[0-9].*/\1/")
 
 	if test (string match $VERSION "1.15")
