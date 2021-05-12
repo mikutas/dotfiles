@@ -135,9 +135,9 @@ function awsdev
 	aws-vault exec dev
 end
 
-function awsprod
+function awsprd
 	set -x AWS_VAULT "" # https://github.com/99designs/aws-vault/issues/352
-	aws-vault exec prod
+	aws-vault exec prd
 end
 
 # todoist
