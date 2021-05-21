@@ -75,6 +75,7 @@ function kubectl
 	set KUBE1_18 ~/.asdf/installs/kubectl/1.18.18/bin/kubectl
 	set KUBE1_19 ~/.asdf/installs/kubectl/1.19.10/bin/kubectl
 	set KUBE1_20 ~/.asdf/installs/kubectl/1.20.6/bin/kubectl
+	set KUBE1_21 ~/.asdf/installs/kubectl/1.21.1/bin/kubectl
 
 	if test (string match -r $argv[1] "config|plugin")
 		$KUBE1_20 $argv;
@@ -95,6 +96,8 @@ function kubectl
 		$KUBE1_19 $argv;
 	else if test (string match $VERSION "1.20")
 		$KUBE1_20 $argv;
+	else if test (string match $VERSION "1.21")
+		$KUBE1_21 $argv;
 	else
 		echo "Debug: $VERSION"
 	end
