@@ -54,3 +54,6 @@ end
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/takumi/google-cloud-sdk/path.fish.inc' ]; . '/home/takumi/google-cloud-sdk/path.fish.inc'; end
+
+# https://asdf-vm.com/#/core-manage-asdf
+source ~/.asdf/asdf.fish
