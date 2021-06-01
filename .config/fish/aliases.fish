@@ -121,7 +121,7 @@ end
 
 # Linkerd
 function l5d-install
-	curl -sL run.linkerd.io/install | env LINKERD2_VERSION=$argv sh
+	curl -sL https://run.linkerd.io/install | env LINKERD2_VERSION=$argv sh
 end
 
 function l5d-board
