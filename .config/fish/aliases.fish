@@ -72,9 +72,9 @@ function kubectl
 	set KUBE1_15 ~/.asdf/installs/kubectl/1.15.12/bin/kubectl
 	set KUBE1_16 ~/.asdf/installs/kubectl/1.16.15/bin/kubectl
 	set KUBE1_17 ~/.asdf/installs/kubectl/1.17.17/bin/kubectl
-	set KUBE1_18 ~/.asdf/installs/kubectl/1.18.18/bin/kubectl
-	set KUBE1_19 ~/.asdf/installs/kubectl/1.19.10/bin/kubectl
-	set KUBE1_20 ~/.asdf/installs/kubectl/1.20.6/bin/kubectl
+	set KUBE1_18 ~/.asdf/installs/kubectl/1.18.19/bin/kubectl
+	set KUBE1_19 ~/.asdf/installs/kubectl/1.19.11/bin/kubectl
+	set KUBE1_20 ~/.asdf/installs/kubectl/1.20.7/bin/kubectl
 	set KUBE1_21 ~/.asdf/installs/kubectl/1.21.1/bin/kubectl
 
 	if test (string match -r $argv[1] "config|plugin")
