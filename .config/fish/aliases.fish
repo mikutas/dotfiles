@@ -58,51 +58,7 @@ function ls
 	end
 end
 
-# Docker
-function dcp -w 'docker-compose'
-	docker-compose $argv;
-end
-
-function lzd -w 'lazydocker'
-	lazydocker $argv;
-end
-
 # Kubernetes
-function kubectl
-	set KUBE1_15 ~/.asdf/installs/kubectl/1.15.12/bin/kubectl
-	set KUBE1_16 ~/.asdf/installs/kubectl/1.16.15/bin/kubectl
-	set KUBE1_17 ~/.asdf/installs/kubectl/1.17.17/bin/kubectl
-	set KUBE1_18 ~/.asdf/installs/kubectl/1.18.19/bin/kubectl
-	set KUBE1_19 ~/.asdf/installs/kubectl/1.19.11/bin/kubectl
-	set KUBE1_20 ~/.asdf/installs/kubectl/1.20.7/bin/kubectl
-	set KUBE1_21 ~/.asdf/installs/kubectl/1.21.1/bin/kubectl
-
-	if test (string match -r $argv[1] "config|plugin")
-		$KUBE1_20 $argv;
-		return
-	end
-
-	set VERSION ($KUBE1_20 version --short | tail -n 1 | sed -r "s/^Server Version: v([0-9].[0-9][0-9]).[0-9].*/\1/")
-
-	if test (string match $VERSION "1.15")
-		$KUBE1_15 $argv;
-	else if test (string match $VERSION "1.16")
-		$KUBE1_16 $argv;
-	else if test (string match $VERSION "1.17")
-		$KUBE1_17 $argv;
-	else if test (string match $VERSION "1.18")
-		$KUBE1_18 $argv;
-	else if test (string match $VERSION "1.19")
-		$KUBE1_19 $argv;
-	else if test (string match $VERSION "1.20")
-		$KUBE1_20 $argv;
-	else if test (string match $VERSION "1.21")
-		$KUBE1_21 $argv;
-	else
-		echo "Debug: $VERSION"
-	end
-end
-
 function k -w 'kubectl'
 	kubectl $argv;
 end
@@ -126,26 +82,6 @@ end
 
 function l5d-board
 	linkerd viz dashboard $argv;
-end
-
-# AWS
-function mfad
-	aws-mfa --profile dev $argv;
-end
-
-function mfap
-	aws-mfa --profile prd $argv;
-end
-
-
-function awsdev
-	set -x AWS_VAULT "" # https://github.com/99designs/aws-vault/issues/352
-	aws-vault exec dev
-end
-
-function awsprd
-	set -x AWS_VAULT "" # https://github.com/99designs/aws-vault/issues/352
-	aws-vault exec prd
 end
 
 # todoist

@@ -23,8 +23,6 @@ set -x AWS_VAULT_BACKEND pass
 set -x AWS_SESSION_TOKEN_TTL 10h
 # fish-ghq
 set -g GHQ_SELECTOR peco
-# starship
-starship init fish | source
 
 function fish_title
 	set base (basename (pwd))
@@ -45,11 +43,11 @@ end
 # No configuration is needed if you’re using Homebrew’s fish. Friendly!
 # If your fish is from somewhere else, add the following to your ~/.config/fish/config.fish:
 if test -d (brew --prefix)"/share/fish/completions"
-    set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/completions
+	set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/completions
 end
 
 if test -d (brew --prefix)"/share/fish/vendor_completions.d"
-    set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
+	set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
 end
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -57,3 +55,6 @@ if [ -f '/home/takumi/google-cloud-sdk/path.fish.inc' ]; . '/home/takumi/google-
 
 # https://asdf-vm.com/#/core-manage-asdf
 source ~/.asdf/asdf.fish
+
+# starship
+starship init fish | source
