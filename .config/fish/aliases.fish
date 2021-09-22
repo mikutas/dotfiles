@@ -119,3 +119,8 @@ function bw-install
 	chmod +x /tmp/bw
 	sudo mv /tmp/bw /usr/local/bin
 end
+
+# starship
+function starship-install
+	curl -fsSL https://starship.rs/install.sh | bash
+end
