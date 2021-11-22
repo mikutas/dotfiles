@@ -1,0 +1,9 @@
+kubectl 1.21.2
+stern 1.20.1
+aws-vault 6.3.1
+helm 3.7.1
+ghq 1.2.1
+ripgrep 13.0.0
+exa 0.10.1
+kubectx 0.9.4
+golang 1.17.3
