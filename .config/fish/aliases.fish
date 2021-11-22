@@ -1,3 +1,18 @@
+# asdf
+function asdfc # asdf check update
+	echo "checking" $argv[1]
+	if colordiff (asdf list $argv[1] | tail -n 1 | sed -e "s/^\s\s//" | psub) (asdf list-all $argv[1] | tail -n 1 | psub)
+		echo "=>latest"
+	end
+end
+
+function asdfc-all
+	set plugins (asdf plugin list)
+	for plugin in $plugins
+		asdfc $plugin
+	end
+end
+
 # Git
 function add -w 'git add'
 	git add $argv;
