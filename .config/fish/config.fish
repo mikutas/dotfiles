@@ -12,7 +12,7 @@ set -x GOPATH (go env GOPATH)
 set -x PATH $GOPATH/bin $PATH
 set -x PATH /usr/local/kubebuilder/bin $PATH
 set -x PATH ~/.linkerd2/bin $PATH
-set -x PATH ~/.asdf/installs/nodejs/16.13.0/bin $PATH
+set -x PATH ~/.asdf/installs/(cat ~/.tool-versions | rg nodejs | sed -e 's/\s/\//')/bin $PATH
 # kubectl diff
 set -x KUBECTL_EXTERNAL_DIFF colordiff
 # https://github.com/instrumenta/kubernetes-json-schema/issues/26
