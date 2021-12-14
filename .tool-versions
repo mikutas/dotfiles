@@ -2,7 +2,7 @@ bat 0.18.3
 exa 0.10.1
 fzf 0.28.0
 ghq 1.2.1
-helm 3.7.1
+helm 3.7.2
 kubectl 1.21.7
 kubectx 0.9.4
 protoc 3.19.1
