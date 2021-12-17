@@ -3,7 +3,7 @@ exa 0.10.1
 fzf 0.28.0
 ghq 1.2.1
 helm 3.7.2
-kubectl 1.21.7
+kubectl 1.21.8
 kubectx 0.9.4
 nodejs 16.13.1
 protoc 3.19.1
