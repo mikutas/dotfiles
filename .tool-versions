@@ -4,6 +4,7 @@ fzf 0.28.0
 ghq 1.2.1
 helm 3.7.2
 helmfile 0.142.0
+hugo 0.74.3
 kubectl 1.21.8
 kubectx 0.9.4
 nodejs 16.13.1
