@@ -2,11 +2,11 @@ bat 0.19.0
 exa 0.10.1
 fzf 0.29.0
 ghq 1.2.1
-helm 3.7.2
+helm 3.8.0
 helmfile 0.143.0
 hugo 0.74.3
 kubectl 1.21.8
 kubectx 0.9.4
 nodejs 16.13.2
-protoc 3.19.3
+protoc 3.19.4
 ripgrep 13.0.0
