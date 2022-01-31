@@ -7,7 +7,7 @@ function asdfc # asdf check update
 end
 
 function asdfc-all
-	set plugins (asdf plugin list)
+	set plugins (asdf plugin list | rg -v "$argv[1]")
 	for plugin in $plugins
 		asdfc $plugin
 	end
