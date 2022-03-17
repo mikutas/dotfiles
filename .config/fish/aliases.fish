@@ -13,6 +13,11 @@ function asdfc-all
 	end
 end
 
+function asdf-install
+	asdf install $argv[1] $argv[2]
+	asdf global $argv[1] $argv[2]
+end
+
 # Git
 function add -w 'git add'
 	git add $argv;
