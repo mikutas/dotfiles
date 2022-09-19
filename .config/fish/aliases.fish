@@ -82,11 +82,6 @@ function ls
 	end
 end
 
-# Docker
-function lzd -w 'lazydocker'
-	lazydocker $argv;
-end
-
 # Kubernetes
 function k -w 'kubectl'
 	kubectl $argv;
