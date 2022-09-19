@@ -7,7 +7,11 @@ function asdfc # asdf check update
 end
 
 function asdfc-all
-	set plugins (asdf plugin list | rg -v "$argv[1]")
+	if test (count $argv) -lt 2
+		set plugins (asdf plugin list)
+	else
+		set plugins (asdf plugin list | rg -v "$argv[1]")
+	end
 	for plugin in $plugins
 		asdfc $plugin
 	end
