@@ -71,7 +71,7 @@ end
 function gh-repo-fork
 	gh repo fork
 	set repo (basename (pwd))
-	git remote add tkms0106 git@github.com:tkms0106/$repo
+	git remote add mikutas git@github.com:mikutas/$repo
 end
 
 # exa
