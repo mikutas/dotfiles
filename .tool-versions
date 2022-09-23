@@ -11,5 +11,5 @@ kubectx 0.9.4
 kustomize 4.5.7
 nodejs 16.17.0
 peco 0.5.10
-protoc 3.20.1
+protoc 3.20.2
 ripgrep 13.0.0
