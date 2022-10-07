@@ -54,6 +54,8 @@ if [ -f '/home/takumi/google-cloud-sdk/path.fish.inc' ]; . '/home/takumi/google-
 
 # https://asdf-vm.com/#/core-manage-asdf
 source ~/.asdf/asdf.fish
+# https://aquaproj.github.io/docs/tutorial-basics/quick-start
+set -x PATH $HOME/.local/share/aquaproj-aqua/bin $PATH
 set -x PATH ~/.asdf/installs/(cat ~/.tool-versions | rg nodejs | sed -e 's/\s/\//')/bin $PATH
 
 # starship
