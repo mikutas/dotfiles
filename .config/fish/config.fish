@@ -6,13 +6,11 @@ set -x PATH /home/linuxbrew/.linuxbrew/bin $PATH
 set -g fish_user_paths "/home/linuxbrew/.linuxbrew/sbin" $fish_user_paths
 set -x PATH ~/.local/bin $PATH
 set -x PATH ~/.krew/bin $PATH
-set -x PATH ~/.asdf/shims $PATH
 set -x PATH /usr/local/go/bin $PATH
 set -x GOPATH (go env GOPATH)
 set -x PATH $GOPATH/bin $PATH
 set -x PATH /usr/local/kubebuilder/bin $PATH
 set -x PATH ~/.linkerd2/bin $PATH
-set -x PATH ~/.asdf/installs/(cat ~/.tool-versions | rg nodejs | sed -e 's/\s/\//')/bin $PATH
 # kubectl diff
 set -x KUBECTL_EXTERNAL_DIFF colordiff
 # https://github.com/instrumenta/kubernetes-json-schema/issues/26
@@ -56,6 +54,7 @@ if [ -f '/home/takumi/google-cloud-sdk/path.fish.inc' ]; . '/home/takumi/google-
 
 # https://asdf-vm.com/#/core-manage-asdf
 source ~/.asdf/asdf.fish
+set -x PATH ~/.asdf/installs/(cat ~/.tool-versions | rg nodejs | sed -e 's/\s/\//')/bin $PATH
 
 # starship
 starship init fish | source
