@@ -22,6 +22,26 @@ function asdf-install
 	asdf global $argv[1] $argv[2]
 end
 
+# Bitwarden
+function bw-install
+	if not ls /tmp/bw-linux-$argv.zip
+		wget -P /tmp https://github.com/bitwarden/cli/releases/download/v$argv/bw-linux-$argv.zip
+	else
+		echo "bw-linux-$argv.zip already exists"
+	end
+	unzip /tmp/bw-linux-$argv.zip -d /tmp
+	chmod +x /tmp/bw
+	sudo mv /tmp/bw /usr/local/bin
+end
+
+# exa
+function ls
+	exa $argv;
+	if test $status -ne 0;
+		/usr/bin/ls $argv;
+	end
+end
+
 # Git
 function add -w 'git add'
 	git add $argv;
@@ -74,12 +94,18 @@ function gh-repo-fork
 	git remote add mikutas git@github.com:mikutas/$repo
 end
 
-# exa
-function ls
-	exa $argv;
-	if test $status -ne 0;
-		/usr/bin/ls $argv;
+# go
+function go-uninstall
+	sudo rm -r /usr/local/go
+end
+
+function go-install
+	if not ls /tmp/go$argv.linux-amd64.tar.gz
+		wget -P /tmp https://golang.org/dl/go$argv.linux-amd64.tar.gz
+	else
+		echo "go$argv.linux-amd64.tar.gz already exists"
 	end
+	sudo tar -C /usr/local -xzf /tmp/go$argv.linux-amd64.tar.gz
 end
 
 # Kubernetes
@@ -108,38 +134,12 @@ function l5d-board
 	linkerd viz dashboard $argv;
 end
 
-# todoist
-function todo -w 'todoist sync && todoist list --filter "(overdue | today)"'
-	todoist sync && todoist list --filter "(overdue | today)";
-end
-
-# go
-function go-uninstall
-	sudo rm -r /usr/local/go
-end
-
-function go-install
-	if not ls /tmp/go$argv.linux-amd64.tar.gz
-		wget -P /tmp https://golang.org/dl/go$argv.linux-amd64.tar.gz
-	else
-		echo "go$argv.linux-amd64.tar.gz already exists"
-	end
-	sudo tar -C /usr/local -xzf /tmp/go$argv.linux-amd64.tar.gz
-end
-
-# Bitwarden
-function bw-install
-	if not ls /tmp/bw-linux-$argv.zip
-		wget -P /tmp https://github.com/bitwarden/cli/releases/download/v$argv/bw-linux-$argv.zip
-	else
-		echo "bw-linux-$argv.zip already exists"
-	end
-	unzip /tmp/bw-linux-$argv.zip -d /tmp
-	chmod +x /tmp/bw
-	sudo mv /tmp/bw /usr/local/bin
-end
-
 # starship
 function starship-install
 	curl -fsSL https://starship.rs/install.sh | sh
+end
+
+# todoist
+function todo -w 'todoist sync && todoist list --filter "(overdue | today)"'
+	todoist sync && todoist list --filter "(overdue | today)";
 end
