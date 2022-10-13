@@ -20,6 +20,7 @@ packages:
 - name: mikefarah/yq@v4.28.1
 - name: ogham/exa@v0.10.1
 - name: peco/peco@v0.5.10
+- name: protocolbuffers/protobuf/protoc@v21.7
 - name: rancher/k3d@v5.4.6
 - name: sharkdp/bat@v0.22.1
 - name: smallstep/cli@v0.22.0
