@@ -1,3 +1,8 @@
+# aqua
+function aqua-uninstall
+	rm ~/.local/share/aquaproj-aqua/bin/$argv[1]
+end
+
 # asdf
 function asdfc # asdf check update
 	echo "checking" $argv[1]
