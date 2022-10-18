@@ -1,5 +1,12 @@
 # aqua
-function aqua-uninstall
+# 古いパッケージを削除するために全パッケージを削除して再インストール
+function aqua-clean
+	rm -r ~/.local/share/aquaproj-aqua/pkgs
+	aqua i
+end
+
+# binの削除のみ（パッケージは残る）
+function aqua-rm
 	rm ~/.local/share/aquaproj-aqua/bin/$argv[1]
 end
 
