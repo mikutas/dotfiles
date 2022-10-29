@@ -34,18 +34,6 @@ function asdf-install
 	asdf global $argv[1] $argv[2]
 end
 
-# Bitwarden
-function bw-install
-	if not ls /tmp/bw-linux-$argv.zip
-		wget -P /tmp https://github.com/bitwarden/cli/releases/download/v$argv/bw-linux-$argv.zip
-	else
-		echo "bw-linux-$argv.zip already exists"
-	end
-	unzip /tmp/bw-linux-$argv.zip -d /tmp
-	chmod +x /tmp/bw
-	sudo mv /tmp/bw /usr/local/bin
-end
-
 # exa
 function ls
 	exa $argv;
@@ -144,11 +132,6 @@ end
 
 function l5d-board
 	linkerd viz dashboard $argv;
-end
-
-# starship
-function starship-install
-	curl -fsSL https://starship.rs/install.sh | sh
 end
 
 # todoist
