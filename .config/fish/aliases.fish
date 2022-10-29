@@ -1,4 +1,8 @@
 # aqua
+# go required
+function aqua-setup
+	go run github.com/aquaproj/aqua-installer@latest
+end
 # 古いパッケージを削除するために全パッケージを削除して再インストール
 function aqua-clean
 	rm -r ~/.local/share/aquaproj-aqua/pkgs
