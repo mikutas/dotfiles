@@ -16,7 +16,7 @@ end
 
 # asdf
 # https://asdf-vm.com/guide/getting-started.html#_2-download-asdf
-function asdf-dl
+function asdf-setup
 	git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
 	mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 end
@@ -53,7 +53,7 @@ function ls
 end
 
 # fisher https://github.com/jorgebucaran/fisher
-function fisher-install
+function fisher-setup
 	curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 end
 
@@ -114,7 +114,7 @@ function go-uninstall
 	sudo rm -r /usr/local/go
 end
 
-function go-install
+function go-setup
 	if not ls /tmp/go$argv.linux-amd64.tar.gz
 		wget -P /tmp https://golang.org/dl/go$argv.linux-amd64.tar.gz
 	else
@@ -141,7 +141,7 @@ function ktx -w 'kubectx'
 end
 
 # Linkerd
-function l5d-install
+function l5d-setup
 	curl -sL https://run.linkerd.io/install | env LINKERD2_VERSION=$argv sh
 end
 
