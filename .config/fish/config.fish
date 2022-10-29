@@ -54,5 +54,8 @@ source ~/.asdf/asdf.fish
 set -x PATH $HOME/.local/share/aquaproj-aqua/bin $PATH
 set -x PATH ~/.asdf/installs/(cat ~/.tool-versions | rg nodejs | sed -e 's/\s/\//')/bin $PATH
 
+# https://direnv.net/docs/hook.html#fish
+direnv hook fish | source
+
 # starship
 starship init fish | source
