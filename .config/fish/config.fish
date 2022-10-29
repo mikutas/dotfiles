@@ -1,19 +1,24 @@
 . ~/.config/fish/aliases.fish
+
 # PATH
-set -x PATH /home/linuxbrew/.linuxbrew/bin $PATH
+fish_add_path /home/linuxbrew/.linuxbrew/bin
 set -g fish_user_paths "/home/linuxbrew/.linuxbrew/sbin" $fish_user_paths
-set -x PATH ~/.local/bin $PATH
-set -x PATH ~/.krew/bin $PATH
-set -x PATH /usr/local/go/bin $PATH
+fish_add_path ~/.local/bin
+fish_add_path ~/.krew/bin
+fish_add_path /usr/local/go/bin
 set -x GOPATH (go env GOPATH)
-set -x PATH $GOPATH/bin $PATH
-set -x PATH ~/.linkerd2/bin $PATH
+fish_add_path $GOPATH/bin
+fish_add_path ~/.linkerd2/bin
+
 # kubectl diff
 set -x KUBECTL_EXTERNAL_DIFF colordiff
+
 # https://github.com/instrumenta/kubernetes-json-schema/issues/26
 set -x KUBEVAL_SCHEMA_LOCATION https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master
+
 # https://jlk.fjfi.cvut.cz/arch/manpages/man/gpg-agent.1.html
 set -x GPG_TTY (tty)
+
 # fish-ghq
 set -g GHQ_SELECTOR peco
 
@@ -49,8 +54,8 @@ if [ -f '/home/takumi/google-cloud-sdk/path.fish.inc' ]; . '/home/takumi/google-
 # https://asdf-vm.com/#/core-manage-asdf
 source ~/.asdf/asdf.fish
 # https://aquaproj.github.io/docs/tutorial-basics/quick-start
-set -x PATH $HOME/.local/share/aquaproj-aqua/bin $PATH
-set -x PATH ~/.asdf/installs/(cat ~/.tool-versions | rg nodejs | sed -e 's/\s/\//')/bin $PATH
+fish_add_path ~/.local/share/aquaproj-aqua/bin
+fish_add_path ~/.asdf/installs/(cat ~/.tool-versions | rg nodejs | sed -e 's/\s/\//')/bin
 
 # https://direnv.net/docs/hook.html#fish
 direnv hook fish | source
