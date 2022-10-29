@@ -11,6 +11,12 @@ function aqua-rm
 end
 
 # asdf
+# https://asdf-vm.com/guide/getting-started.html#_2-download-asdf
+function asdf-dl
+	git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
+	mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+end
+
 function asdfc # asdf check update
 	echo "checking" $argv[1]
 	if colordiff (asdf list $argv[1] | tail -n 1 | sed -e "s/^\s\s//" | psub) (asdf list-all $argv[1] | tail -n 1 | psub)
