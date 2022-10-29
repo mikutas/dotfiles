@@ -42,7 +42,7 @@ function ls
 	end
 end
 
-# fisher
+# fisher https://github.com/jorgebucaran/fisher
 function fisher-install
 	curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 end
