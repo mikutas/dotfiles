@@ -1,6 +1,4 @@
 . ~/.config/fish/aliases.fish
-# Personal access tokens
-. ~/.config/fish/github.fish
 # PATH
 set -x PATH /home/linuxbrew/.linuxbrew/bin $PATH
 set -g fish_user_paths "/home/linuxbrew/.linuxbrew/sbin" $fish_user_paths
