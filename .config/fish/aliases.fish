@@ -78,8 +78,16 @@ function fixup -w 'git commit --amend --no-edit'
 	git commit --amend --no-edit $argv;
 end
 
+function ghq-root
+	git config --global ghq.root ~/go/src
+end
+
 function gl -w 'git log'
 	git log $argv;
+end
+
+function pull -w 'git pull --rebase --prune'
+	git pull --rebase --prune
 end
 
 function push -w 'git push'
@@ -92,10 +100,6 @@ end
 
 function stash -w 'git stash'
 	git stash $argv;
-end
-
-function pull -w 'git pull --rebase --prune'
-	git pull --rebase --prune
 end
 
 function lg -w 'lazygit'
