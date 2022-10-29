@@ -42,6 +42,11 @@ function ls
 	end
 end
 
+# fisher
+function fisher-install
+	curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+end
+
 # Git
 function add -w 'git add'
 	git add $argv;
