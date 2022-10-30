@@ -86,6 +86,10 @@ function gl -w 'git log'
 	git log $argv;
 end
 
+function glo -w 'git log --oneline'
+	git log --oneline $argv;
+end
+
 function pull -w 'git pull --rebase --prune'
 	git pull --rebase --prune
 end
