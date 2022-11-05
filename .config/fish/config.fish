@@ -55,6 +55,8 @@ if [ -f '/home/takumi/google-cloud-sdk/path.fish.inc' ]; . '/home/takumi/google-
 source ~/.asdf/asdf.fish
 # https://aquaproj.github.io/docs/tutorial-basics/quick-start
 fish_add_path ~/.local/share/aquaproj-aqua/bin
+set -x AQUA_GLOBAL_CONFIG ~/aqua.yaml
+
 fish_add_path ~/.asdf/installs/(cat ~/.tool-versions | rg nodejs | sed -e 's/\s/\//')/bin
 
 # https://direnv.net/docs/hook.html#fish
