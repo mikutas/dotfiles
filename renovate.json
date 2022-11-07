@@ -1,5 +1,18 @@
 {
   "extends": [
-    "github>aquaproj/aqua-renovate-config#1.2.6"
+    "github>aquaproj/aqua-renovate-config#1.2.6",
+    "github>aquaproj/aqua-renovate-config:installer-script#1.2.6(aliases\\.fish)"
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": [
+        ".config/fish/aliases.fish"
+      ],
+      "matchStrings": [
+        "aqua-installer \\| bash -s -- -v (?<currentValue>.*)\n"
+      ],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "aquaproj/aqua"
+    }
   ]
 }
