@@ -1,7 +1,6 @@
 # aqua
 # go required
 function aqua-setup
-	go run github.com/aquaproj/aqua-installer@latest
 	curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v1.1.2/aqua-installer | bash -s -- -v v1.22.0
 end
 # 古いパッケージを削除するために全パッケージを削除して再インストール
