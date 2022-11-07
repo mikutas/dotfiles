@@ -46,3 +46,7 @@ symbol = " "
 
 [rust]
 symbol = " "
+
+[shell]
+disabled = false
+fish_indicator = ""
