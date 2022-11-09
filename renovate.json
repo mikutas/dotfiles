@@ -1,4 +1,5 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>aquaproj/aqua-renovate-config#1.2.6",
     "github>aquaproj/aqua-renovate-config:installer-script#1.2.6(aliases\\.fish)"
