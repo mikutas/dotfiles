@@ -157,6 +157,16 @@ function l5d-board
 	linkerd viz dashboard $argv;
 end
 
+# Renovate
+function renovate
+	if ls ./.envrc
+		docker run --rm -it -v (pwd):/tmp renovate/renovate:34.22.1-slim sh -c "curl -sfL https://direnv.net/install.sh | bash && cd /tmp && direnv allow . && direnv exec . renovate $argv"
+	else
+		docker run --rm -it -v (pwd):/tmp renovate/renovate:34.22.1-slim sh -c "renovate $argv"
+	end
+    rm -rf renovate/
+end
+
 # todoist
 function todo -w 'todoist sync && todoist list --filter "(overdue | today)"'
 	todoist sync && todoist list --filter "(overdue | today)";
