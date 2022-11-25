@@ -167,6 +167,10 @@ function renovate
     rm -rf renovate/
 end
 
+function renovate-config-validator
+	docker run --rm -it -v (pwd):/tmp renovate/renovate:34.22.1-slim sh -c "cd /tmp && renovate-config-validator"
+end
+
 # todoist
 function todo -w 'todoist sync && todoist list --filter "(overdue | today)"'
 	todoist sync && todoist list --filter "(overdue | today)";
