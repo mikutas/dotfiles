@@ -21,6 +21,16 @@
       ],
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "aquaproj/aqua"
+    },
+    {
+      "fileMatch": [
+        ".config/fish/aliases.fish"
+      ],
+      "matchStrings": [
+        "renovate\\/renovate:(?<currentValue>.*)-slim"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "renovate/renovate"
     }
   ]
 }
