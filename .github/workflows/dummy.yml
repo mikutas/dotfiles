@@ -1,0 +1,10 @@
+# https://docs.renovatebot.com/key-concepts/automerge/
+name: dummy
+
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello!"
