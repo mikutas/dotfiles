@@ -17,7 +17,7 @@ packages:
 - name: junegunn/fzf@0.35.1
 - name: kubernetes-sigs/kind@v0.17.0
 - name: kubernetes-sigs/kustomize@kustomize/v4.5.7
-- name: mikefarah/yq@v4.30.4
+- name: mikefarah/yq@v4.30.5
 - name: nektos/act@v0.2.33
 - name: ogham/exa@v0.10.1
 - name: peco/peco@v0.5.10
