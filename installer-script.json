@@ -1,0 +1,14 @@
+{
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "{{arg0}}"
+      ],
+      "matchStrings": [
+        "aqua-installer \\| bash -s -- -v (?<currentValue>[^'\" \\n]+)[\\n|\\s].*"
+      ],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "aquaproj/aqua"
+    }
+  ]
+}

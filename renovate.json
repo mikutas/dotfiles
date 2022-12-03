@@ -2,7 +2,8 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>aquaproj/aqua-renovate-config#1.2.6",
-    "github>aquaproj/aqua-renovate-config:installer-script#1.2.6(aliases\\.fish)"
+    "github>aquaproj/aqua-renovate-config:installer-script#1.2.6(aliases\\.fish)",
+    "github>mikutas/dotfiles:installer-script(aliases\\.fish)"
   ],
   "packageRules": [
     {
@@ -13,16 +14,6 @@
   ],
   "platformAutomerge": true,
   "regexManagers": [
-    {
-      "fileMatch": [
-        ".config/fish/aliases.fish"
-      ],
-      "matchStrings": [
-        "aqua-installer \\| bash -s -- -v (?<currentValue>.*)\n"
-      ],
-      "datasourceTemplate": "github-releases",
-      "depNameTemplate": "aquaproj/aqua"
-    },
     {
       "fileMatch": [
         ".config/fish/aliases.fish"
