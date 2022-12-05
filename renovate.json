@@ -3,8 +3,7 @@
   "extends": [
     ":timezone(Asia/Tokyo)",
     "github>aquaproj/aqua-renovate-config#1.2.6",
-    "github>aquaproj/aqua-renovate-config:installer-script#1.2.6(aliases\\.fish)",
-    "github>mikutas/dotfiles:installer-script(aliases\\.fish)"
+    "github>aquaproj/aqua-renovate-config:installer-script#1.3.0(aliases\\.fish)"
   ],
   "packageRules": [
     {
