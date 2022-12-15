@@ -44,6 +44,25 @@ function asdf-install
 	asdf global $argv[1] $argv[2]
 end
 
+# aws
+function eks-kubeconfig
+	set profile $argv[1]
+	set cluster $argv[2]
+	set kubeconfig $argv[3]
+
+	if not string length -q $profile
+		set profile (aws configure list-profiles | peco --select-1 --prompt='profile>')
+	end
+	if not string length -q $cluster
+		set cluster (aws eks list-clusters --profile=$profile | jq -r '.clusters[]' | peco --select-1 --prompt='cluster>')
+	end
+	if not string length -q $kubeconfig
+		set kubeconfig (ls ~/.kube/config* | peco --select-1 --prompt='kubeconfig>')
+	end
+
+	aws eks update-kubeconfig --name $cluster --alias $cluster --profile $profile --kubeconfig $kubeconfig
+end
+
 # exa
 function ls
 	exa $argv;
