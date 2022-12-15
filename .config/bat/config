@@ -1,0 +1,2 @@
+--style=plain
+--map-syntax "*.json5:JSON"
