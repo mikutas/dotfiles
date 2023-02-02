@@ -1,0 +1,13 @@
+name: aqua
+
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: aquaproj/aqua-installer@v2.0.2
+        with:
+          aqua_version: v1.32.1
