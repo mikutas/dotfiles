@@ -24,6 +24,6 @@ packages:
 - name: protocolbuffers/protobuf/protoc@v21.7
 - name: rancher/k3d@v5.4.7
 - name: sharkdp/bat@v0.22.1
-- name: smallstep/cli@v0.23.1
+- name: smallstep/cli@v0.23.2
 - name: starship/starship@v1.12.0
 - name: x-motemen/ghq@v1.3.0
