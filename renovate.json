@@ -2,8 +2,8 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     ":timezone(Asia/Tokyo)",
-    "github>aquaproj/aqua-renovate-config#1.5.1",
-    "github>aquaproj/aqua-renovate-config:installer-script#1.5.1(aliases\\.fish)"
+    "github>aquaproj/aqua-renovate-config#1.5.2",
+    "github>aquaproj/aqua-renovate-config:installer-script#1.5.2(aliases\\.fish)"
   ],
   "packageRules": [
     {
