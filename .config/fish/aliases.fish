@@ -3,16 +3,6 @@
 function aqua-setup
 	curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v2.0.2/aqua-installer | bash -s -- -v v1.33.0
 end
-# 古いパッケージを削除するために全パッケージを削除して再インストール
-function aqua-clean
-	rm -r ~/.local/share/aquaproj-aqua/pkgs
-	aqua i
-end
-
-# binの削除のみ（パッケージは残る）
-function aqua-rm
-	rm ~/.local/share/aquaproj-aqua/bin/$argv[1]
-end
 
 # asdf
 # https://asdf-vm.com/guide/getting-started.html#_2-download-asdf
