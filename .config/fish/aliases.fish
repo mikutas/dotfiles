@@ -11,7 +11,7 @@ function aqua-rm
 	set owner (ls $base/$pkgtype/$site | peco --select-1 --prompt='owner>')
 	set repo (ls $base/$pkgtype/$site/$owner | peco --select-1 --prompt='repo>')
 	if test (ls $base/$pkgtype/$site/$owner/$repo | wc -l ) -lt 2
-		echo "Nothing to remove"
+		echo "Nothing to remove in $site/$owner/$repo"
 	else
 		set ver (ls $base/$pkgtype/$site/$owner/$repo | peco --select-1 --prompt='version>')
 		echo "rm -r $base/$pkgtype/$site/$owner/$repo/$ver"
