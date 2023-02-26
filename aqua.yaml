@@ -25,5 +25,5 @@ packages:
 - name: rancher/k3d@v5.4.7
 - name: sharkdp/bat@v0.22.1
 - name: smallstep/cli@v0.23.2
-- name: starship/starship@v1.12.0
+- name: starship/starship@v1.13.1
 - name: x-motemen/ghq@v1.4.1
