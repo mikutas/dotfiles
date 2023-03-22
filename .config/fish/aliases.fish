@@ -141,6 +141,12 @@ function gh-repo-fork
 	git remote add mikutas git@github.com:mikutas/$repo
 end
 
+function gh-pr-merge
+	set pullrequest (gh pr list | peco --select-1)
+	set number (echo $pullrequest | cut -f 1)
+	gh pr merge $number
+end
+
 # go
 function go-uninstall
 	sudo rm -r /usr/local/go
