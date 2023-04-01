@@ -18,7 +18,7 @@ packages:
 - name: kubernetes-sigs/kind@v0.17.0
 - name: kubernetes-sigs/kustomize@kustomize/v4.5.7
 - name: mikefarah/yq@v4.33.1
-- name: nektos/act@v0.2.43
+- name: nektos/act@v0.2.44
 - name: ogham/exa@v0.10.1
 - name: peco/peco@v0.5.11
 - name: protocolbuffers/protobuf/protoc@v21.7
