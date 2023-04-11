@@ -68,6 +68,17 @@ function eks-kubeconfig
 	aws eks update-kubeconfig --name $cluster --alias $cluster --profile $profile --kubeconfig $kubeconfig
 end
 
+# docker
+function docker-image-rm
+	set image (docker image ls | peco --select-1 --prompt='image>')
+	if not string length -q $image
+		echo "Canceled."
+	else
+		set image_id (echo $image | sed 's/\s\{1,\}/ /g' | cut -d " " -f 3)
+		docker image rm $image_id
+	end
+end
+
 # exa
 function ls
 	exa $argv;
