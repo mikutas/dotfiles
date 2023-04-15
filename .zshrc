@@ -1,5 +1,7 @@
-source ~/.config/zsh/title.zsh
-source ~/.config/zsh/aliases.zsh
+for file in $(ls ~/.config/zsh)
+do
+	source ~/.config/zsh/$file
+done
 
 export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000
