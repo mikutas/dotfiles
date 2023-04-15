@@ -9,6 +9,12 @@ export SAVEHIST=100000
 setopt hist_ignore_dups
 setopt EXTENDED_HISTORY
 
+# https://aquaproj.github.io/docs/reference/use-aqua-with-other-tools
+export PATH=${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH
+
+# https://aquaproj.github.io/docs/reference/config/#environment-variables
+export AQUA_GLOBAL_CONFIG=$HOME/aqua.yaml
+
 export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
 export PATH=/home/linuxbrew/.linuxbrew/sbin:$PATH
 export PATH=$HOME/.local/bin:$PATH
@@ -18,20 +24,14 @@ export GOPATH=$(go env GOPATH)
 export PATH=$GOPATH/bin:$PATH
 export PATH=$HOME/.linkerd2/bin:$PATH
 
+# https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
+. "$HOME/.asdf/asdf.sh"
+
 # https://github.com/instrumenta/kubernetes-json-schema/issues/26
 export KUBEVAL_SCHEMA_LOCATION=https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master
 
 # https://jlk.fjfi.cvut.cz/arch/manpages/man/gpg-agent.1.html
 export GPG_TTY=$(tty)
-
-# https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
-. "$HOME/.asdf/asdf.sh"
-
-# https://aquaproj.github.io/docs/reference/use-aqua-with-other-tools
-export PATH=${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH
-
-# https://aquaproj.github.io/docs/reference/config/#environment-variables
-export AQUA_GLOBAL_CONFIG=$HOME/aqua.yaml
 
 # https://direnv.net/docs/hook.html#zsh
 eval "$(direnv hook zsh)"
