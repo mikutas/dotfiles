@@ -1,5 +1,10 @@
 alias ll="ls -l"
 
+# asdf
+function aqua-setup() {
+	curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v2.1.1/aqua-installer | bash -s -- -v v1.38.0
+}
+
 # docker
 function docker-image-rm() {
 	local image=$(docker image ls | peco --select-1 --prompt='image>')
@@ -40,6 +45,20 @@ function gh-pr-merge() {
 	local pr=$(gh pr list | peco --select-1)
 	local num=$(echo $pr | cut -f 1)
 	gh pr merge $num -r -d
+}
+
+# go
+function go-uninstall() {
+	sudo rm -r /usr/local/go
+}
+
+function go-setup() {
+	if [[ $(ls /tmp/go$1.linux-amd64.tar.gz) = *"No such file or directory"* ]]  then
+		wget -P /tmp https://go.dev/dl/go$1.linux-amd64.tar.gz
+	else
+		echo "go$1.linux-amd64.tar.gz already exists"
+	fi
+	sudo tar -C /usr/local -xzf /tmp/go$1.linux-amd64.tar.gz
 }
 
 # kubectl
