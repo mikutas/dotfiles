@@ -9,6 +9,8 @@ export SAVEHIST=100000
 setopt hist_ignore_dups
 setopt EXTENDED_HISTORY
 
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
 # https://aquaproj.github.io/docs/reference/use-aqua-with-other-tools
 export PATH=${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH
 
