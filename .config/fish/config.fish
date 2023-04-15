@@ -1,6 +1,10 @@
 . ~/.config/fish/aliases.fish
 
+set -x AQUA_GLOBAL_CONFIG ~/aqua.yaml
+
 # PATH
+# https://aquaproj.github.io/docs/tutorial-basics/quick-start
+fish_add_path ~/.local/share/aquaproj-aqua/bin
 fish_add_path /home/linuxbrew/.linuxbrew/bin
 set -g fish_user_paths "/home/linuxbrew/.linuxbrew/sbin" $fish_user_paths
 fish_add_path ~/.local/bin
@@ -10,10 +14,6 @@ set -x GOPATH (go env GOPATH)
 fish_add_path $GOPATH/bin
 fish_add_path ~/.linkerd2/bin
 
-# https://aquaproj.github.io/docs/tutorial-basics/quick-start
-fish_add_path ~/.local/share/aquaproj-aqua/bin
-
-set -x AQUA_GLOBAL_CONFIG ~/aqua.yaml
 # https://github.com/instrumenta/kubernetes-json-schema/issues/26
 set -x KUBEVAL_SCHEMA_LOCATION https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master
 
