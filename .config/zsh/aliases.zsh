@@ -67,6 +67,11 @@ alias kd="kubectl describe"
 alias kg="kubectl get"
 alias ktx="kubectx"
 
+# Linkerd
+function l5d-setup() {
+	curl --proto '=https' --tlsv1.2 -sSfL https://run.linkerd.io/install | LINKERD2_VERSION=$1 sh
+}
+
 # Renovate
 function renovate() {
 	docker run --rm -it -v $(pwd):/tmp renovate/renovate:35.2.0-slim sh -c "curl -sfL https://direnv.net/install.sh | bash && cd /tmp && direnv allow . && direnv exec . renovate $1"
