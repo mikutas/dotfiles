@@ -66,3 +66,12 @@ alias k="kubectl"
 alias kd="kubectl describe"
 alias kg="kubectl get"
 alias ktx="kubectx"
+
+# Renovate
+function renovate() {
+	docker run --rm -it -v $(pwd):/tmp renovate/renovate:35.2.0-slim sh -c "curl -sfL https://direnv.net/install.sh | bash && cd /tmp && direnv allow . && direnv exec . renovate $1"
+}
+
+function renovate-config-validator() {
+	docker run --rm -it -v $(pwd):/tmp renovate/renovate:35.2.0-slim sh -c "cd /tmp && renovate-config-validator"
+}
