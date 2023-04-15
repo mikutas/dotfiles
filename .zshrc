@@ -9,6 +9,7 @@ export SAVEHIST=100000
 setopt hist_ignore_dups
 setopt EXTENDED_HISTORY
 
+autoload -U compinit && compinit
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # https://aquaproj.github.io/docs/reference/use-aqua-with-other-tools
