@@ -10,9 +10,10 @@ set -x GOPATH (go env GOPATH)
 fish_add_path $GOPATH/bin
 fish_add_path ~/.linkerd2/bin
 
-# kubectl diff
-set -x KUBECTL_EXTERNAL_DIFF colordiff
+# https://aquaproj.github.io/docs/tutorial-basics/quick-start
+fish_add_path ~/.local/share/aquaproj-aqua/bin
 
+set -x AQUA_GLOBAL_CONFIG ~/aqua.yaml
 # https://github.com/instrumenta/kubernetes-json-schema/issues/26
 set -x KUBEVAL_SCHEMA_LOCATION https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master
 
@@ -53,9 +54,6 @@ if [ -f '/home/takumi/google-cloud-sdk/path.fish.inc' ]; . '/home/takumi/google-
 
 # https://asdf-vm.com/#/core-manage-asdf
 source ~/.asdf/asdf.fish
-# https://aquaproj.github.io/docs/tutorial-basics/quick-start
-fish_add_path ~/.local/share/aquaproj-aqua/bin
-set -x AQUA_GLOBAL_CONFIG ~/aqua.yaml
 
 fish_add_path ~/.asdf/installs/(cat ~/.tool-versions | rg nodejs | sed -e 's/\s/\//')/bin
 
