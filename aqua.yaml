@@ -26,4 +26,4 @@ packages:
 - name: sharkdp/bat@v0.23.0
 - name: smallstep/cli@v0.24.3
 - name: starship/starship@v1.14.2
-- name: x-motemen/ghq@v1.4.1
+- name: x-motemen/ghq@v1.4.2
