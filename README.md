@@ -1,5 +1,11 @@
 # dotfiles
 
 ```fish
-./install.sh
+./install.fish
+```
+
+or
+
+```zsh
+./install.zsh
 ```
