@@ -59,5 +59,5 @@ if [ -f '/home/takumi/google-cloud-sdk/path.fish.inc' ]; . '/home/takumi/google-
 # https://direnv.net/docs/hook.html#fish
 direnv hook fish | source
 
-# starship
+# https://starship.rs/guide/#%F0%9F%9A%80-installation
 starship init fish | source
