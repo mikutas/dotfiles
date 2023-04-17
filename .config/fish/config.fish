@@ -35,7 +35,6 @@ function fish_title
 	else
 		set title "$dir/$base"
 	end
-	#echo "$argv[1] | $title"
 	if test "$argv[1]" != "";
 		echo $argv
 	else
