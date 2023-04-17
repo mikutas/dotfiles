@@ -194,10 +194,6 @@ function l5d-setup
 	curl -sL https://run.linkerd.io/install | env LINKERD2_VERSION=$argv sh
 end
 
-function l5d-board
-	linkerd viz dashboard $argv;
-end
-
 # Renovate
 function renovate
 	if ls ./.envrc
