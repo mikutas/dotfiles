@@ -12,19 +12,19 @@ setopt EXTENDED_HISTORY
 autoload -U compinit && compinit
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
-# https://aquaproj.github.io/docs/reference/use-aqua-with-other-tools
-export PATH=${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH
-
 # https://aquaproj.github.io/docs/reference/config/#environment-variables
 export AQUA_GLOBAL_CONFIG=$HOME/aqua.yaml
+# https://aquaproj.github.io/docs/reference/use-aqua-with-other-tools
+# PATH内の優先度が下がるように早くexportする
+export PATH=${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH
 
 export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
 export PATH=/home/linuxbrew/.linuxbrew/sbin:$PATH
-export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/.krew/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
 export GOPATH=$(go env GOPATH)
 export PATH=$GOPATH/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.krew/bin:$PATH
 export PATH=$HOME/.linkerd2/bin:$PATH
 
 # https://asdf-vm.com/guide/getting-started.html#_3-install-asdf

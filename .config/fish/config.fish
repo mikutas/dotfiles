@@ -3,16 +3,20 @@
 set -x AQUA_GLOBAL_CONFIG ~/aqua.yaml
 
 # PATH
-# https://aquaproj.github.io/docs/tutorial-basics/quick-start
+# https://aquaproj.github.io/docs/reference/use-aqua-with-other-tools
+# PATH内の優先度が下がるように早くfish_add_pathする
 fish_add_path ~/.local/share/aquaproj-aqua/bin
 fish_add_path /home/linuxbrew/.linuxbrew/bin
-set -g fish_user_paths "/home/linuxbrew/.linuxbrew/sbin" $fish_user_paths
-fish_add_path ~/.local/bin
-fish_add_path ~/.krew/bin
+fish_add_path /home/linuxbrew/.linuxbrew/sbin
 fish_add_path /usr/local/go/bin
 set -x GOPATH (go env GOPATH)
 fish_add_path $GOPATH/bin
+fish_add_path ~/.local/bin
+fish_add_path ~/.krew/bin
 fish_add_path ~/.linkerd2/bin
+fish_add_path ~/.asdf/installs/(cat ~/.tool-versions | rg nodejs | sed -e 's/\s/\//')/bin
+# https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
+source ~/.asdf/asdf.fish
 
 # https://github.com/instrumenta/kubernetes-json-schema/issues/26
 set -x KUBEVAL_SCHEMA_LOCATION https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master
@@ -51,11 +55,6 @@ end
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/takumi/google-cloud-sdk/path.fish.inc' ]; . '/home/takumi/google-cloud-sdk/path.fish.inc'; end
-
-# https://asdf-vm.com/#/core-manage-asdf
-source ~/.asdf/asdf.fish
-
-fish_add_path ~/.asdf/installs/(cat ~/.tool-versions | rg nodejs | sed -e 's/\s/\//')/bin
 
 # https://direnv.net/docs/hook.html#fish
 direnv hook fish | source
