@@ -15,6 +15,7 @@ packages:
 - name: helmfile/helmfile@v0.152.0
 - name: jesseduffield/lazygit@v0.35
 - name: junegunn/fzf@0.39.0
+- name: k3d-io/k3d@v5.4.9
 - name: kubernetes-sigs/kind@v0.18.0
 - name: kubernetes-sigs/kustomize@kustomize/v4.5.7
 - name: mikefarah/yq@v4.33.3
@@ -22,8 +23,8 @@ packages:
 - name: ogham/exa@v0.10.1
 - name: peco/peco@v0.5.11
 - name: protocolbuffers/protobuf/protoc@v21.7
-- name: rancher/k3d@v5.4.9
 - name: sharkdp/bat@v0.23.0
 - name: smallstep/cli@v0.24.3
 - name: starship/starship@v1.14.2
 - name: x-motemen/ghq@v1.4.2
+
