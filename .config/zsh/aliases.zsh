@@ -2,7 +2,7 @@ alias ll="ls -l"
 
 # asdf
 function aqua-setup() {
-	curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v2.1.1/aqua-installer | bash -s -- -v v2.3.5
+	curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v2.1.1/aqua-installer | bash -s -- -v v2.3.6
 }
 
 # docker
