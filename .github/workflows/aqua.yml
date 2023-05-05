@@ -10,4 +10,4 @@ jobs:
 
       - uses: aquaproj/aqua-installer@v2.0.2
         with:
-          aqua_version: v2.3.6
+          aqua_version: v2.4.2
