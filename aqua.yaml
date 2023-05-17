@@ -15,7 +15,7 @@ packages:
 - name: helmfile/helmfile@v0.153.1
 - name: jesseduffield/lazygit@v0.35
 - name: junegunn/fzf@0.40.0
-- name: k3d-io/k3d@v5.4.9
+- name: k3d-io/k3d@v5.5.0
 - name: kubernetes-sigs/kind@v0.19.0
 - name: kubernetes-sigs/kustomize@kustomize/v5.0.3
 - name: mikefarah/yq@v4.33.3
