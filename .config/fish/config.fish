@@ -14,6 +14,7 @@ fish_add_path $GOPATH/bin
 fish_add_path ~/.local/bin
 fish_add_path ~/.krew/bin
 fish_add_path ~/.linkerd2/bin
+fish_add_path ~/.cargo/bin
 fish_add_path ~/.asdf/installs/(cat ~/.tool-versions | rg nodejs | sed -e 's/\s/\//')/bin
 # https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
 source ~/.asdf/asdf.fish
