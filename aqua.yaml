@@ -17,6 +17,7 @@ packages:
 - name: gotestyourself/gotestsum@v1.10.1
 - name: helmfile/helmfile@v0.155.0
 - name: jesseduffield/lazygit@v0.39.3
+- name: jqlang/jq@jq-1.6
 - name: junegunn/fzf@0.42.0
 - name: k3d-io/k3d@v5.5.1
 - name: kubernetes-sigs/kind@v0.20.0
