@@ -29,5 +29,5 @@ packages:
 - name: protocolbuffers/protobuf/protoc@v21.12
 - name: sharkdp/bat@v0.23.0
 - name: smallstep/cli@v0.24.4
-- name: starship/starship@v1.15.0
+- name: starship/starship@v1.16.0
 - name: x-motemen/ghq@v1.4.2
