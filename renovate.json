@@ -4,8 +4,8 @@
     ":prConcurrentLimitNone",
     ":prHourlyLimitNone",
     ":timezone(Asia/Tokyo)",
-    "github>aquaproj/aqua-renovate-config#1.7.0",
-    "github>aquaproj/aqua-renovate-config:installer-script#1.7.0(aliases\\..*sh)"
+    "github>aquaproj/aqua-renovate-config#1.8.0",
+    "github>aquaproj/aqua-renovate-config:installer-script#1.8.0(aliases\\..*sh)"
   ],
   "packageRules": [
     {
