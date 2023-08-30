@@ -15,9 +15,10 @@
     }
   ],
   "platformAutomerge": true,
-  "recreateClosed": true,
+  "recreateWhen": "always",
   "regexManagers": [
     {
+      "customType": "regex",
       "fileMatch": [
         "\\.config\\/fish\\/aliases\\..*sh"
       ],
