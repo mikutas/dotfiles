@@ -4,8 +4,8 @@
     ":prConcurrentLimitNone",
     ":prHourlyLimitNone",
     ":timezone(Asia/Tokyo)",
-    "github>aquaproj/aqua-renovate-config#1.8.0",
-    "github>aquaproj/aqua-renovate-config:installer-script#1.8.0(aliases\\..*sh)"
+    "github>aquaproj/aqua-renovate-config#1.9.0",
+    "github>aquaproj/aqua-renovate-config:installer-script#1.9.0(aliases\\..*sh)"
   ],
   "packageRules": [
     {
@@ -27,23 +27,6 @@
       ],
       "datasourceTemplate": "docker",
       "depNameTemplate": "renovate/renovate"
-    },
-    {
-      "customType": "regex",
-      "datasourceTemplate": "github-releases",
-      "depNameTemplate": "jqlang/jq",
-      "extractVersionTemplate": "^jq-(?<version>.*)$",
-      "fileMatch": [
-        "\\.?aqua\\.ya?ml"
-      ],
-      "matchStrings": [
-         " +(?:version|'version'|\"version\") *: +jq-(?<currentValue>[^'\" \\n]+) +# renovate: depName=jqlang/jq[ \\n]",
-         " +(?:version|'version'|\"version\") *: +'jq-(?<currentValue>[^'\" \\n]+)' +# renovate: depName=jqlang/jq[ \\n]",
-         " +(?:version|'version'|\"version\") *: +\"jq-(?<currentValue>[^'\" \\n]+)\" +# renovate: depName=jqlang/jq[ \\n]",
-         " +(?:name|'name'|\"name\") *: +jqlang/jq@jq-(?<currentValue>[^'\" \\n]+)",
-         " +(?:name|'name'|\"name\") *: +'jqlang/jq@jq-(?<currentValue>[^'\" \\n]+)'",
-         " +(?:name|'name'|\"name\") *: +\"jqlang/jq@jq-(?<currentValue>[^'\" \\n]+)\""
-      ]
     }
   ]
 }
