@@ -79,9 +79,9 @@ function docker-image-rm
 	end
 end
 
-# exa
+# eza
 function ls
-	exa $argv;
+	eza $argv;
 	if test $status -ne 0;
 		/usr/bin/ls $argv;
 	end

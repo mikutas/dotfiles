@@ -16,8 +16,8 @@ function docker-image-rm() {
 	fi
 }
 
-# exa
-alias ls="exa"
+# eza
+alias ls="eza"
 
 # git
 alias add="git add"
