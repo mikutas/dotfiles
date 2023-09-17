@@ -6,4 +6,4 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: mikutas/my-aqua-installer@v0.1.0
+      - uses: mikutas/my-aqua-installer@v0.2.0
