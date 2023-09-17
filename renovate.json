@@ -12,6 +12,10 @@
       "matchPackagePatterns": ["aquaproj", "renovate/renovate"],
       "automerge": true,
       "extends": ["schedule:weekends"]
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "enabled": true
     }
   ],
   "platformAutomerge": true,
