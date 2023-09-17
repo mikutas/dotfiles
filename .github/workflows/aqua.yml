@@ -6,8 +6,4 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: aquaproj/aqua-installer@v2.1.2
-        with:
-          aqua_version: v2.11.0
+      - uses: mikutas/my-aqua-installer@v0.1.0
