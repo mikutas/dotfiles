@@ -14,7 +14,6 @@
       "enabled": true
     }
   ],
-  "platformAutomerge": true,
   "recreateWhen": "always",
   "regexManagers": [
     {
