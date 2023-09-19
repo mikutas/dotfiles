@@ -5,14 +5,10 @@
     ":prHourlyLimitNone",
     ":timezone(Asia/Tokyo)",
     "github>aquaproj/aqua-renovate-config#1.10.0",
-    "github>aquaproj/aqua-renovate-config:installer-script#1.10.0(aliases\\..*sh)"
+    "github>aquaproj/aqua-renovate-config:installer-script#1.10.0(aliases\\..*sh)",
+    "github>mikutas/my-renovate-config"
   ],
   "packageRules": [
-    {
-      "matchPackagePatterns": ["aquaproj", "renovate/renovate"],
-      "automerge": true,
-      "extends": ["schedule:weekends"]
-    },
     {
       "matchManagers": ["github-actions"],
       "enabled": true
