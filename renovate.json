@@ -5,12 +5,6 @@
     "github>aquaproj/aqua-renovate-config:installer-script#1.10.0(aliases\\..*sh)",
     "github>mikutas/my-renovate-config"
   ],
-  "packageRules": [
-    {
-      "matchManagers": ["github-actions"],
-      "enabled": true
-    }
-  ],
   "recreateWhen": "always",
   "regexManagers": [
     {
