@@ -6,14 +6,14 @@ end
 
 function aqua-rm
 	set base ~/.local/share/aquaproj-aqua/pkgs
-	set pkgtype (ls $base | peco --select-1 --prompt='type>')
-	set site (ls $base/$pkgtype | peco --select-1 --prompt='site>')
-	set owner (ls $base/$pkgtype/$site | peco --select-1 --prompt='owner>')
-	set repo (ls $base/$pkgtype/$site/$owner | peco --select-1 --prompt='repo>')
-	if test (ls $base/$pkgtype/$site/$owner/$repo | wc -l ) -lt 2
+	set pkgtype (/bin/ls $base | peco --select-1 --prompt='type>')
+	set site (/bin/ls $base/$pkgtype | peco --select-1 --prompt='site>')
+	set owner (/bin/ls $base/$pkgtype/$site | peco --select-1 --prompt='owner>')
+	set repo (/bin/ls $base/$pkgtype/$site/$owner | peco --select-1 --prompt='repo>')
+	if test (/bin/ls $base/$pkgtype/$site/$owner/$repo | wc -l ) -lt 2
 		echo "Nothing to remove in $site/$owner/$repo"
 	else
-		set ver (ls $base/$pkgtype/$site/$owner/$repo | peco --select-1 --prompt='version>')
+		set ver (/bin/ls $base/$pkgtype/$site/$owner/$repo | peco --select-1 --prompt='version>')
 		echo "rm -r $base/$pkgtype/$site/$owner/$repo/$ver"
 		rm -r $base/$pkgtype/$site/$owner/$repo/$ver
 	end
