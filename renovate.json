@@ -6,7 +6,7 @@
     "github>mikutas/my-renovate-config"
   ],
   "recreateWhen": "always",
-  "regexManagers": [
+  "customManagers": [
     {
       "customType": "regex",
       "fileMatch": [
