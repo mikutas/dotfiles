@@ -1,4 +1,4 @@
-name: test
+name: aqua
 
 on: pull_request
 
