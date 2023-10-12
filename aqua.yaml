@@ -29,7 +29,7 @@ packages:
 - name: nektos/act@v0.2.52
 - name: ogham/exa@v0.10.1
 - name: peco/peco@v0.5.11
-- name: protocolbuffers/protobuf/protoc@v21.12
+- name: protocolbuffers/protobuf/protoc@v24.4
 - name: sharkdp/bat@v0.24.0
 - name: smallstep/cli@v0.25.0
 - name: starship/starship@v1.16.0
