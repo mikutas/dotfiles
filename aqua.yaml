@@ -6,7 +6,7 @@ registries:
     ref: v4.77.0 # renovate: depName=aquaproj/aqua-registry
 packages:
 - name: BurntSushi/ripgrep@13.0.0
-- name: FairwindsOps/polaris@8.5.1
+- name: FairwindsOps/polaris@8.5.2
 - name: ahmetb/kubectx@v0.9.5
 - name: argoproj/argo-workflows@v3.5.0
 - name: casey/just@1.15.0
