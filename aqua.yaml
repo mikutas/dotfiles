@@ -10,7 +10,7 @@ packages:
 - name: ahmetb/kubectx@v0.9.5
 - name: argoproj/argo-workflows@v3.5.0
 - name: casey/just@1.15.0
-- name: cli/cli@v2.37.0
+- name: cli/cli@v2.38.0
 - name: derailed/k9s@v0.27.4
 - name: direnv/direnv@v2.32.3
 - name: eza-community/eza@v0.15.1
