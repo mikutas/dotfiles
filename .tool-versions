@@ -1,4 +1,4 @@
 helm 3.13.2
-hugo 0.74.3
+hugo 0.120.4
 kubectl 1.28.4
 nodejs 18.18.2
