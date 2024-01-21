@@ -197,15 +197,15 @@ end
 # Renovate
 function renovate
 	if ls ./.envrc
-		docker run --rm -it -v (pwd):/tmp renovate/renovate:37.140.14-slim sh -c "curl -sfL https://direnv.net/install.sh | bash && cd /tmp && direnv allow . && direnv exec . renovate $argv"
+		docker run --rm -it -v (pwd):/tmp renovate/renovate:37.140.15-slim sh -c "curl -sfL https://direnv.net/install.sh | bash && cd /tmp && direnv allow . && direnv exec . renovate $argv"
 	else
-		docker run --rm -it -v (pwd):/tmp renovate/renovate:37.140.14-slim sh -c "renovate $argv"
+		docker run --rm -it -v (pwd):/tmp renovate/renovate:37.140.15-slim sh -c "renovate $argv"
 	end
     rm -rf renovate/
 end
 
 function renovate-config-validator
-	docker run --rm -it -v (pwd):/tmp renovate/renovate:37.140.14-slim sh -c "cd /tmp && renovate-config-validator"
+	docker run --rm -it -v (pwd):/tmp renovate/renovate:37.140.15-slim sh -c "cd /tmp && renovate-config-validator"
 end
 
 # todoist
