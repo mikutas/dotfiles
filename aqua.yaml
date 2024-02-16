@@ -27,7 +27,7 @@ packages:
 - name: k3d-io/k3d@v5.6.0
 - name: kubernetes-sigs/kind@v0.21.0
 - name: kubernetes-sigs/kustomize@kustomize/v5.3.0
-- name: mikefarah/yq@v4.40.7
+- name: mikefarah/yq@v4.41.1
 - name: nektos/act@v0.2.59
 - name: ogham/exa@v0.10.1
 - name: peco/peco@v0.5.11
