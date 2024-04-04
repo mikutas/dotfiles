@@ -35,4 +35,4 @@ packages:
 - name: sharkdp/bat@v0.24.0
 - name: smallstep/cli@v0.26.0
 - name: starship/starship@v1.18.2
-- name: x-motemen/ghq@v1.5.0
+- name: x-motemen/ghq@v1.6.0
