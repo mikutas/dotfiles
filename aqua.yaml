@@ -11,7 +11,7 @@ packages:
 - name: argoproj/argo-cd@v2.10.9
 - name: argoproj/argo-workflows@v3.5.6
 - name: casey/just@1.25.2
-- name: cli/cli@v2.49.0
+- name: cli/cli@v2.49.1
 - name: derailed/k9s@v0.32.4
 - name: direnv/direnv@v2.34.0
 - name: eza-community/eza@v0.18.14
