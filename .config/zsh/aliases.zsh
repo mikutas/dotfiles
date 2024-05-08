@@ -53,12 +53,23 @@ function go-uninstall() {
 }
 
 function go-setup() {
-	if [[ $(ls /tmp/go$1.linux-amd64.tar.gz) = *"No such file or directory"* ]]  then
-		wget -P /tmp https://go.dev/dl/go$1.linux-amd64.tar.gz
-	else
-		echo "go$1.linux-amd64.tar.gz already exists"
+	os=$(uname)
+	#arch = $(uname -m)
+	file=""
+	if [[ $os = "Linux" ]] then
+		file="go$1.linux-amd64.tar.gz"
+	elif [[ $os = "Darwin" ]] then
+		file="go$1.darwin-arm64.tar.gz"
 	fi
-	sudo tar -C /usr/local -xzf /tmp/go$1.linux-amd64.tar.gz
+	echo $file
+
+	if [[ ! -e /tmp/$file ]]  then
+			curl -o /tmp/$file -L https://go.dev/dl/$file
+	else
+		echo "tar.gz already exists"
+	fi
+
+	sudo tar -C /usr/local -xzf /tmp/$file
 }
 
 # kubectl

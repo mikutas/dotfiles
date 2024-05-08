@@ -42,8 +42,15 @@ eval "$(direnv hook zsh)"
 # https://starship.rs/guide/#%F0%9F%9A%80-installation
 eval "$(starship init zsh)"
 
-# https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#packages
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [[ $(uname) = "Linux" ]] then
+	# https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#packages
+	source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+	# https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#using-packages
+	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
-# https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#using-packages
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ $(uname) = "Darwin" ]] then
+	eval $(/opt/homebrew/bin/brew shellenv)
+	source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
