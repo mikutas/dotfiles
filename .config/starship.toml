@@ -1,11 +1,6 @@
 [aws]
 symbol = " "
 
-[battery]
-full_symbol = ""
-charging_symbol = ""
-discharging_symbol = ""
-
 [cmd_duration]
 min_time = 1_000
 show_milliseconds = true
@@ -27,26 +22,8 @@ symbol = " "
 
 [kubernetes]
 disabled = false
-symbol = "ﴱ "
-
-[memory_usage]
-symbol = " "
-
-[nodejs]
-symbol = " "
-
-[package]
-symbol = " "
-
-[python]
-symbol = " "
-
-[ruby]
-symbol = " "
-
-[rust]
-symbol = " "
+symbol = "☸ "
 
 [shell]
 disabled = false
-fish_indicator = ""
+fish_indicator = '󰈺 '
