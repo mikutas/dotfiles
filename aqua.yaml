@@ -37,4 +37,5 @@ packages:
 - name: sharkdp/bat@v0.24.0
 - name: smallstep/cli@v0.26.1
 - name: starship/starship@v1.18.2
+- name: terraform-docs/terraform-docs@v0.17.0
 - name: x-motemen/ghq@v1.6.1
