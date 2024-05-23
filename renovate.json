@@ -17,6 +17,17 @@
       ],
       "datasourceTemplate": "docker",
       "depNameTemplate": "renovate/renovate"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "test\\.yaml"
+      ],
+      "matchStrings": [
+        "github\\.com\\/(?<depName>.*?)\\/blob\\/(?<currentValue>.*?)\\/deploy\\/charts\\/cert-manager\\/values.yaml"
+      ],
+      "datasourceTemplate": "github-tags",
+      "depNameTemplate": "cert-manager/cert-manager"
     }
   ]
 }
