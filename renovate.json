@@ -10,7 +10,7 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "\\.config\\/fish\\/aliases\\..*sh"
+        "aliases\\..*sh"
       ],
       "matchStrings": [
         "renovate\\/renovate:(?<currentValue>.*)-slim"
