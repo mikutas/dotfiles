@@ -85,7 +85,9 @@ function l5d-setup() {
 
 # Renovate
 function renovate() {
-	docker run --rm -it -v $(pwd):/tmp renovate/renovate:37.377.5-slim sh -c "curl -sfL https://direnv.net/install.sh | bash && cd /tmp && direnv allow . && direnv exec . renovate $1"
+	set -x
+	args=$@
+	docker run --rm -it -v $(pwd):/tmp renovate/renovate:37.377.5-slim sh -c "curl -sfL https://direnv.net/install.sh | bash && cd /tmp && direnv allow . && direnv exec . renovate $args"
 }
 
 function renovate-config-validator() {
