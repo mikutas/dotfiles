@@ -8,7 +8,10 @@
   "packageRules": [
     {
       "matchPackageNames": [
-        "kubernetes/kubectl"
+        // aquaだと
+        // kubernetes/kubectl
+        // asdfだと
+        "kubectl"
       ],
       "allowedVersions": "<=1.28"
     }
