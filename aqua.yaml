@@ -9,7 +9,7 @@ packages:
 - name: BurntSushi/ripgrep@14.1.0
 - name: FairwindsOps/polaris@8.5.5
 - name: ahmetb/kubectx@v0.9.5
-- name: argoproj/argo-cd@v2.11.2
+- name: argoproj/argo-cd@v2.11.3
 - name: argoproj/argo-workflows@v3.5.6
 - name: aws/aws-cli@2.15.62
 - name: bitwarden/clients@cli-v2024.4.1
