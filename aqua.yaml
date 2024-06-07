@@ -11,7 +11,7 @@ packages:
 - name: ahmetb/kubectx@v0.9.5
 - name: argoproj/argo-cd@v2.11.3
 - name: argoproj/argo-workflows@v3.5.6
-- name: aws/aws-cli@2.15.62
+- name: aws/aws-cli@2.16.3
 - name: bitwarden/clients@cli-v2024.4.1
 - name: casey/just@1.28.0
 - name: cert-manager/cmctl@v2.0.0
