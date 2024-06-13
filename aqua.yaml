@@ -27,8 +27,6 @@ packages:
 - name: golangci/golangci-lint@v1.59.0
 - name: goreleaser/goreleaser@v1.26.2
 - name: gotestyourself/gotestsum@v1.11.0
-- name: gruntwork-io/terragrunt@v0.58.4
-- name: hashicorp/terraform@v1.8.3
 - name: helmfile/helmfile@v0.165.0
 - name: jesseduffield/lazygit@v0.42.0
 - name: jqlang/jq@jq-1.7.1
