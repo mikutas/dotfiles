@@ -44,4 +44,5 @@ packages:
 - name: starship/starship@v1.19.0
 - name: terraform-docs/terraform-docs@v0.17.0
 - name: terraform-linters/tflint@v0.51.1
+- name: tfutils/tfenv@v3.0.0
 - name: x-motemen/ghq@v1.6.1
