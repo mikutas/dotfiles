@@ -5,6 +5,17 @@ function aqua-setup() {
 	curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v3.0.1/aqua-installer | bash -s -- -v v2.29.0
 }
 
+# aws
+function devprof() {
+	# 引数で.envrcの位置を指定
+	gsed -i 's/AWS_PROFILE=prod/AWS_PROFILE=dev/' $@
+}
+
+function prodprof() {
+	# 引数で.envrcの位置を指定
+	gsed -i 's/AWS_PROFILE=dev/AWS_PROFILE=prod/' $@
+}
+
 # docker
 function docker-image-rm() {
 	local image=$(docker image ls | peco --select-1 --prompt='image>')
