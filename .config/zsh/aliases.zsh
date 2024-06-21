@@ -6,14 +6,13 @@ function aqua-setup() {
 }
 
 # aws
-function devprof() {
-	# 引数で.envrcの位置を指定
-	gsed -i 's/AWS_PROFILE=prod/AWS_PROFILE=dev/' $@
-}
-
-function prodprof() {
-	# 引数で.envrcの位置を指定
-	gsed -i 's/AWS_PROFILE=dev/AWS_PROFILE=prod/' $@
+function awsprof() {
+	# $2で.envrcの位置を指定
+	if [[ $1 = "prod" ]] then
+		gsed -i 's/AWS_PROFILE=dev/AWS_PROFILE=prod/' $2
+	else
+		gsed -i 's/AWS_PROFILE=prod/AWS_PROFILE=dev/' $2
+	fi
 }
 
 # docker
