@@ -55,6 +55,7 @@ function gh-pr-merge() {
 	local pr=$(gh pr list | peco --select-1)
 	local num=$(echo $pr | cut -f 1)
 	gh pr merge $num -r -d
+	git pull --rebase --prune
 }
 
 # go
