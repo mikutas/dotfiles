@@ -54,3 +54,7 @@ if [[ $(uname) = "Darwin" ]] then
 	source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
+
+if type "rbenv" > /dev/null 2>&1; then
+	eval "$(rbenv init - zsh)"
+fi
