@@ -7,11 +7,11 @@ function aqua-setup() {
 
 # aws
 function awsprof() {
-	# $2で.envrcの位置を指定
-	if [[ $1 = "prod" ]] then
-		gsed -i 's/AWS_PROFILE=dev/AWS_PROFILE=prod/' $2
+	# $1で.envrcの位置を指定
+	if [[ $2 = "prod" ]] then
+		gsed -i 's/AWS_PROFILE=dev/AWS_PROFILE=prod/' $1
 	else
-		gsed -i 's/AWS_PROFILE=prod/AWS_PROFILE=dev/' $2
+		gsed -i 's/AWS_PROFILE=prod/AWS_PROFILE=dev/' $1
 	fi
 }
 
