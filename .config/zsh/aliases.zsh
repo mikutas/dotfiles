@@ -6,6 +6,7 @@ function aqua-setup() {
 }
 
 # aws
+# Macのみ
 function awsprof() {
 	# $1で.envrcの位置を指定
 	if [[ $2 = "prod" ]] then
@@ -22,6 +23,9 @@ function docker-image-rm() {
 		echo "Canceled."
 	else
 		local image_id=$(echo $image | sed 's/\s\{1,\}/ /g' | cut -d " " -f 3)
+		if [[ $(uname) = "Darwin" ]] then
+			local image_id=$(echo $image | gsed 's/\s\{1,\}/ /g' | cut -d " " -f 3)
+		fi
 		docker image rm $image_id
 	fi
 }
