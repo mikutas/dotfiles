@@ -47,4 +47,4 @@ packages:
 - name: terraform-docs/terraform-docs@v0.17.0
 - name: terraform-linters/tflint@v0.52.0
 - name: tfutils/tfenv@v3.0.0
-- name: x-motemen/ghq@v1.6.1
+- name: x-motemen/ghq@v1.6.2
