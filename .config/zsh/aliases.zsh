@@ -108,3 +108,16 @@ function renovate() {
 function renovate-config-validator() {
 	docker run --rm -it -v $(pwd):/tmp renovate/renovate:37.431.4-slim sh -c "cd /tmp && renovate-config-validator"
 }
+
+# Terraform
+function tf() {
+	if [ -z $2 ]; then
+		echo "PR number required"
+		return 1
+	fi
+	if [ -z $1 ]; then
+		echo "Subcommand required (plan/apply)"
+		return 1
+	fi
+	tfcmt -pr $2 $1 -- terraform $1
+}
