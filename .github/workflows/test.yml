@@ -6,6 +6,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: mikutas/my-aqua-installer@v0.2.1
+      - uses: mikutas/my-aqua-installer@main
         with:
           aqua_opts: "-l=false" # disable lazy install
