@@ -7,7 +7,7 @@ registries:
 packages:
   - name: 99designs/aws-vault@v7.2.0
   - name: BurntSushi/ripgrep@14.1.0
-  - name: FairwindsOps/polaris@9.2.0
+  - name: FairwindsOps/polaris@9.2.1
   - name: ahmetb/kubectx@v0.9.5
   - name: argoproj/argo-cd@v2.11.5
   - name: argoproj/argo-workflows@v3.5.6
