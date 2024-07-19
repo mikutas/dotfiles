@@ -13,7 +13,7 @@
         // asdfだと
         "kubectl"
       ],
-      "allowedVersions": "<=1.28"
+      "allowedVersions": "<=1.29"
     }
   ],
   "recreateWhen": "always",
