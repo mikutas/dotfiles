@@ -19,9 +19,6 @@ fish_add_path ~/.asdf/installs/(cat ~/.tool-versions | rg nodejs | sed -e 's/\s/
 # https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
 source ~/.asdf/asdf.fish
 
-# https://github.com/instrumenta/kubernetes-json-schema/issues/26
-set -x KUBEVAL_SCHEMA_LOCATION https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master
-
 # https://jlk.fjfi.cvut.cz/arch/manpages/man/gpg-agent.1.html
 set -x GPG_TTY (tty)
 

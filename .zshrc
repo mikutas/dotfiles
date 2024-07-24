@@ -30,9 +30,6 @@ export PATH=$HOME/.linkerd2/bin:$PATH
 # https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
 . "$HOME/.asdf/asdf.sh"
 
-# https://github.com/instrumenta/kubernetes-json-schema/issues/26
-export KUBEVAL_SCHEMA_LOCATION=https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master
-
 # https://jlk.fjfi.cvut.cz/arch/manpages/man/gpg-agent.1.html
 export GPG_TTY=$(tty)
 
