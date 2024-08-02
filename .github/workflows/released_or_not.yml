@@ -1,0 +1,33 @@
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  not-released:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        if: ${{ startsWith(github.event.comment.body, '/notreleased') }}
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['not released']
+            })
+
+  released:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for /released command
+        if: ${{ startsWith(github.event.comment.body, '/released') }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.removeLabel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              name: 'not released',
+            });
