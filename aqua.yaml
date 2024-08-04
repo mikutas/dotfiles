@@ -46,7 +46,7 @@ packages:
   - name: sharkdp/bat@v0.24.0
   - name: smallstep/cli@v0.27.2
   - name: starship/starship@v1.20.1
-  - name: suzuki-shunsuke/tfcmt@v4.11.0
+  - name: suzuki-shunsuke/tfcmt@v4.12.0
   - name: terraform-docs/terraform-docs@v0.18.0
   - name: terraform-linters/tflint@v0.52.0
   - name: tfutils/tfenv@v3.0.0
