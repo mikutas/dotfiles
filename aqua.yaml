@@ -30,7 +30,7 @@ packages:
   - name: gotestyourself/gotestsum@v1.11.0
   - name: helmfile/helmfile@v0.167.1
   - name: jesseduffield/lazygit@v0.43.1
-  - name: josephburnett/jd@v1.8.1
+  - name: josephburnett/jd@v1.9.0
   - name: jqlang/jq@jq-1.7.1
   - name: junegunn/fzf@v0.54.3
   - name: k3d-io/k3d@v5.7.3
