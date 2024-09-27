@@ -20,6 +20,11 @@ function awsprof() {
 	fi
 }
 
+function start-session() {
+	read "target?target>"
+	aws ssm start-session --target $target
+}
+
 # docker
 function docker-image-rm() {
 	local image=$(docker image ls | peco --select-1 --prompt='image>')
