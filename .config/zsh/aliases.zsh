@@ -71,6 +71,11 @@ function gh-pr-merge() {
 	git pull --rebase --prune
 }
 
+function gh-ready-approve() {
+	gh pr ready $1
+	gh pr review --approve $1
+}
+
 # go
 function go-uninstall() {
 	sudo rm -r /usr/local/go
