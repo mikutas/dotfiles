@@ -53,5 +53,6 @@ packages:
   - name: terraform-docs/terraform-docs@v0.19.0
   - name: terraform-linters/tflint@v0.54.0
   - name: tfutils/tfenv@v3.0.0
+  - name: tmccombs/hcl2json@v0.6.4
   - name: tsenart/vegeta@v12.12.0
   - name: x-motemen/ghq@v1.7.1
