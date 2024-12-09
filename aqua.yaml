@@ -11,7 +11,7 @@ packages:
   - name: Ladicle/kubectl-rolesum@v1.5.6
   - name: ahmetb/kubectx@v0.9.5
   - name: argoproj/argo-cd@v2.13.1
-  - name: argoproj/argo-workflows@v3.5.6
+  - name: argoproj/argo-workflows@v3.6.2
   - name: aws/amazon-ec2-instance-selector@v2.4.1
   - name: aws/aws-cli@2.22.12
   - name: bitwarden/clients@cli-v2024.11.1
