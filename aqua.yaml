@@ -12,7 +12,7 @@ packages:
   - name: ahmetb/kubectx@v0.9.5
   - name: argoproj/argo-cd@v2.13.2
   - name: argoproj/argo-workflows@v3.5.6
-  - name: aws/amazon-ec2-instance-selector@v2.4.1
+  - name: aws/amazon-ec2-instance-selector@v3.0.0
   - name: aws/aws-cli@2.22.17
   - name: bitwarden/clients@cli-v2024.11.1
   - name: casey/just@1.38.0
