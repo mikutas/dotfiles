@@ -67,7 +67,8 @@ function gh-repo-fork() {
 function gh-pr-merge() {
 	local pr=$(gh pr list | peco --select-1)
 	local num=$(echo $pr | cut -f 1)
-	gh pr merge $num -r -d
+	# $1に--rebaseなど適宜
+	gh pr merge $num --delete-branch $1
 	git pull --rebase --prune
 }
 
