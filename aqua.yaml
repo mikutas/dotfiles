@@ -38,7 +38,7 @@ packages:
   - name: junegunn/fzf@v0.57.0
   - name: k3d-io/k3d@v5.7.5
   - name: kubernetes-sigs/kind@v0.26.0
-  - name: kubernetes-sigs/kustomize@kustomize/v5.5.0
+  - name: kubernetes-sigs/kustomize@kustomize/v5.6.0
   - name: kyverno/kyverno@v1.12.5
   - name: mikefarah/yq@v4.45.1
   - name: nektos/act@v0.2.71
