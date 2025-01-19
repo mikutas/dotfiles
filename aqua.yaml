@@ -36,7 +36,7 @@ packages:
   - name: josephburnett/jd@v1.9.1
   - name: jqlang/jq@jq-1.7.1
   - name: junegunn/fzf@v0.57.0
-  - name: k3d-io/k3d@v5.7.5
+  - name: k3d-io/k3d@v5.8.1
   - name: kubernetes-sigs/kind@v0.26.0
   - name: kubernetes-sigs/kustomize@kustomize/v5.5.0
   - name: kyverno/kyverno@v1.12.5
