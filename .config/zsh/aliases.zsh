@@ -119,11 +119,11 @@ function l5d-setup() {
 function renovate() {
 	set -x
 	args=$@
-	docker run --rm -it -v $(pwd):/usr/src/app renovate/renovate:39.132.0 sh -c "curl -sfL https://direnv.net/install.sh | bash && direnv allow . && direnv exec . renovate $args"
+	docker run --rm -it -v $(pwd):/usr/src/app renovate/renovate:39.133.3 sh -c "curl -sfL https://direnv.net/install.sh | bash && direnv allow . && direnv exec . renovate $args"
 }
 
 function renovate-config-validator() {
-	docker run --rm -it -v $(pwd):/usr/src/app renovate/renovate:39.132.0 sh -c "renovate-config-validator"
+	docker run --rm -it -v $(pwd):/usr/src/app renovate/renovate:39.133.3 sh -c "renovate-config-validator"
 }
 
 # Terraform
