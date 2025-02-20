@@ -48,7 +48,7 @@ packages:
   - name: protocolbuffers/protobuf/protoc@v21.12
   - name: robscott/kube-capacity@v0.8.0
   - name: sharkdp/bat@v0.25.0
-  - name: smallstep/cli@v0.28.2
+  - name: smallstep/cli@v0.28.3
   - name: starship/starship@v1.22.1
   - name: suzuki-shunsuke/tfcmt@v4.14.2
   - name: terraform-docs/terraform-docs@v0.19.0
