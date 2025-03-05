@@ -1,8 +1,12 @@
 alias ll="ls -l"
 
-# asdf
+# aqua
 function aqua-setup() {
 	curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v3.1.1/aqua-installer | bash -s -- -v v2.45.0
+}
+
+function aqua-sort() {
+	yq e '.packages |= sort_by(.name)' -i aqua.yaml
 }
 
 # aws
