@@ -76,6 +76,10 @@ function gh-ready-approve() {
 	# 主に-l labelする用
 	local pr=$(gh pr list $1 $2 | peco --select-1)
 	local num=$(echo $pr | cut -f 1)
+	if [ -z "$num" ]; then
+		echo "Canceled."
+		return 1
+	fi
 	gh pr ready $num
 	gh pr review --approve $num
 }
