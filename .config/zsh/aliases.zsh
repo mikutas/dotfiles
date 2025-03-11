@@ -73,7 +73,8 @@ function gh-pr-merge() {
 }
 
 function gh-ready-approve() {
-	local pr=$(gh pr list | peco --select-1)
+	# 主に-l labelする用
+	local pr=$(gh pr list $1 $2 | peco --select-1)
 	local num=$(echo $pr | cut -f 1)
 	gh pr ready $num
 	gh pr review --approve $num
