@@ -15,7 +15,7 @@ packages:
   - name: argoproj/argo-workflows@v3.5.6
   - name: aws/amazon-ec2-instance-selector@v3.1.1
   - name: aws/aws-cli@2.25.6
-  - name: bitwarden/clients@cli-v2025.2.0
+  - name: bitwarden/clients@cli-v2025.3.0
   - name: casey/just@1.40.0
   - name: cert-manager/cmctl@v2.1.1
   - name: cli/cli@v2.69.0
