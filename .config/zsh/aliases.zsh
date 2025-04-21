@@ -117,7 +117,7 @@ alias ktx="kubectx"
 
 # Linkerd
 function l5d-setup() {
-	curl --proto '=https' --tlsv1.2 -sSfL https://run.linkerd.io/install | LINKERD2_VERSION=$1 sh
+	curl --proto '=https' --tlsv1.2 -sSfL https://run.linkerd.io/install-edge | LINKERD2_VERSION=$1 sh
 }
 
 # Renovate
