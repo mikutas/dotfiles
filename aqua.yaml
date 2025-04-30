@@ -40,7 +40,7 @@ packages:
   - name: k3d-io/k3d@v5.8.3
   - name: kubernetes-sigs/kind@v0.27.0
   - name: kubernetes-sigs/kustomize@kustomize/v5.6.0
-  - name: kyverno/kyverno@v1.14.0
+  - name: kyverno/kyverno@v1.14.1
   - name: mikefarah/yq@v4.45.1
   - name: nektos/act@v0.2.76
   - name: norwoodj/helm-docs@v1.14.2
