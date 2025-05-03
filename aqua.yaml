@@ -33,7 +33,7 @@ packages:
   - name: gotestyourself/gotestsum@v1.12.1
   - name: helmfile/helmfile@v1.0.0
   - name: homeport/dyff@v1.10.1
-  - name: jesseduffield/lazygit@v0.49.0
+  - name: jesseduffield/lazygit@v0.50.0
   - name: josephburnett/jd@v2.2.2
   - name: jqlang/jq@jq-1.7.1
   - name: junegunn/fzf@v0.61.3
