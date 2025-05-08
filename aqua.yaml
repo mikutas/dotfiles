@@ -34,7 +34,7 @@ packages:
   - name: helmfile/helmfile@v1.0.0
   - name: homeport/dyff@v1.10.1
   - name: jesseduffield/lazygit@v0.50.0
-  - name: josephburnett/jd@v2.2.2
+  - name: josephburnett/jd@v2.2.3
   - name: jqlang/jq@jq-1.7.1
   - name: junegunn/fzf@v0.62.0
   - name: k3d-io/k3d@v5.8.3
