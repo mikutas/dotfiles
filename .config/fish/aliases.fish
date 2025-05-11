@@ -1,7 +1,7 @@
 # aqua
 # go required
 function aqua-setup
-	curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v3.1.2/aqua-installer | bash -s -- -v v2.51.1
+	curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v3.1.2/aqua-installer | bash -s -- -v v2.51.2
 end
 
 function aqua-rm
