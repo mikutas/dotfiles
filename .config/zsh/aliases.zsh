@@ -2,7 +2,7 @@ alias ll="ls -l"
 
 # aqua
 function aqua-setup() {
-	curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v3.1.2/aqua-installer | bash -s -- -v v2.51.2
+	curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v4.0.0/aqua-installer | bash -s -- -v v2.51.2
 }
 
 function aqua-sort() {
