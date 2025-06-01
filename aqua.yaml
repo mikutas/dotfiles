@@ -42,7 +42,7 @@ packages:
   - name: kubernetes-sigs/kustomize@kustomize/v5.6.0
   - name: kyverno/kyverno@v1.14.1
   - name: mikefarah/yq@v4.45.4
-  - name: nektos/act@v0.2.77
+  - name: nektos/act@v0.2.78
   - name: norwoodj/helm-docs@v1.14.2
   - name: ogham/exa@v0.10.1
   - name: pcasteran/terraform-graph-beautifier@v0.3.4
