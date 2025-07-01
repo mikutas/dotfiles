@@ -35,7 +35,7 @@ packages:
   - name: homeport/dyff@v1.10.1
   - name: jesseduffield/lazygit@v0.52.0
   - name: josephburnett/jd@v2.2.3
-  - name: jqlang/jq@jq-1.8.0
+  - name: jqlang/jq@jq-1.8.1
   - name: junegunn/fzf@v0.62.0
   - name: k3d-io/k3d@v5.8.3
   - name: kubernetes-sigs/kind@v0.29.0
