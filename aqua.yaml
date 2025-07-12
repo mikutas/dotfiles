@@ -23,7 +23,7 @@ packages:
   - name: direnv/direnv@v2.37.0
   - name: eksctl-io/eksctl@v0.210.0
   - name: elsesiy/kubectl-view-secret@v0.14.0
-  - name: eza-community/eza@v0.21.4
+  - name: eza-community/eza@v0.22.1
   - name: fujiwara/awslim@v0.4.0
   - name: fullstorydev/grpcurl@v1.9.3
   - name: getsops/sops@v3.10.2
