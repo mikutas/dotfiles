@@ -10,7 +10,7 @@
       "matchDepNames": [
         "kubectl"
       ],
-      "allowedVersions": "<=1.31"
+      "allowedVersions": "<=1.32"
     }
   ],
   "recreateWhen": "always",
