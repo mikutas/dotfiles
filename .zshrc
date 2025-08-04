@@ -50,6 +50,10 @@ if [[ $(uname) = "Darwin" ]] then
 	eval $(/opt/homebrew/bin/brew shellenv)
 	source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+	# The next line updates PATH for the Google Cloud SDK.
+	if [ -f '/Users/takumi.sue/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/takumi.sue/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+	# The next line enables shell command completion for gcloud.
+	if [ -f '/Users/takumi.sue/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/takumi.sue/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 fi
 
 if type "rbenv" > /dev/null 2>&1; then
