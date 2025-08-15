@@ -31,7 +31,7 @@ packages:
   - name: golangci/golangci-lint@v2.4.0
   - name: goreleaser/goreleaser@v2.11.2
   - name: gotestyourself/gotestsum@v1.12.3
-  - name: helmfile/helmfile@v1.1.4
+  - name: helmfile/helmfile@v1.1.5
   - name: homeport/dyff@v1.10.2
   - name: jesseduffield/lazygit@v0.54.2
   - name: josephburnett/jd@v2.3.0
