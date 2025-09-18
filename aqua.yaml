@@ -10,7 +10,7 @@ packages:
   - name: FairwindsOps/polaris@10.1.1
   - name: Ladicle/kubectl-rolesum@v1.5.6
   - name: ahmetb/kubectx@v0.9.5
-  - name: argoproj/argo-cd@v3.1.5
+  - name: argoproj/argo-cd@v3.1.6
   - name: argoproj/argo-rollouts@v1.8.3
   - name: argoproj/argo-workflows@v3.7.2
   - name: aws/amazon-ec2-instance-selector@v3.1.1
