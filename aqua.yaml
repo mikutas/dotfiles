@@ -47,7 +47,7 @@ packages:
   - name: ogham/exa@v0.10.1
   - name: pcasteran/terraform-graph-beautifier@v0.3.4
   - name: peco/peco@v0.5.11
-  - name: protocolbuffers/protobuf/protoc@v21.12
+  - name: protocolbuffers/protobuf/protoc@v32.1
   - name: robscott/kube-capacity@v0.8.0
   - name: sharkdp/bat@v0.25.0
   - name: sharkdp/pastel@v0.10.0
