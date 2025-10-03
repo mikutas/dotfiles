@@ -143,3 +143,8 @@ function tf() {
 	fi
 	tfcmt -pr $2 $1 -- terraform $1
 }
+
+# yq
+function yq-sort-aqua() {
+	yq e '.packages |= sort_by(.name)' -i aqua.yaml
+}
