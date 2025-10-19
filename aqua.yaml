@@ -50,7 +50,7 @@ packages:
   - name: protocolbuffers/protobuf/protoc@v21.12
   - name: robscott/kube-capacity@v0.8.0
   - name: sharkdp/bat@v0.25.0
-  - name: sharkdp/pastel@v0.10.0
+  - name: sharkdp/pastel@v0.11.0
   - name: smallstep/cli@v0.28.7
   - name: starship/starship@v1.23.0
   - name: stern/stern@v1.33.0
