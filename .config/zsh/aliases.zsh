@@ -65,7 +65,7 @@ function gh-repo-fork() {
 }
 
 function gh-pr-merge() {
-	local pr=$(gh pr list | peco --select-1)
+	local pr=$(gh pr list $1 $2 | peco --select-1)
 	local num=$(echo $pr | cut -f 1)
 	# $1に--rebaseなど適宜
 	gh pr merge $num --delete-branch $1
@@ -82,6 +82,11 @@ function gh-ready-approve() {
 	fi
 	gh pr ready $num
 	gh pr review --approve $num
+	read "merge?merge? (y/n)>"
+	if [[ $merge = "y" ]] then
+		gh pr merge $num --delete-branch
+		git pull --rebase --prune
+	fi
 }
 
 # go
