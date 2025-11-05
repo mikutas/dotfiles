@@ -48,6 +48,7 @@ packages:
   - name: pcasteran/terraform-graph-beautifier@v0.3.4
   - name: peco/peco@v0.5.11
   - name: protocolbuffers/protobuf/protoc@v21.12
+  - name: reviewdog/reviewdog@v0.21.0
   - name: robscott/kube-capacity@v0.8.0
   - name: sharkdp/bat@v0.26.0
   - name: sharkdp/pastel@v0.11.0
