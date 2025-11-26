@@ -23,7 +23,7 @@ source ~/.asdf/asdf.fish
 set -x GPG_TTY (tty)
 
 # fish-ghq
-set -g GHQ_SELECTOR peco
+set -g GHQ_SELECTOR fzf
 
 function fish_title
 	set base (basename (pwd))

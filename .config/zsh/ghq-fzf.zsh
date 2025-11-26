@@ -1,0 +1,10 @@
+function ghq-fzf () {
+  local selected_dir=$(ghq list -p | fzf)
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N ghq-fzf
+bindkey '^G' ghq-fzf
