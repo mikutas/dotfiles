@@ -65,10 +65,15 @@ function gh-repo-fork() {
 }
 
 function gh-pr-merge() {
-	local pr=$(gh pr list $1 $2 | peco --select-1)
-	local num=$(echo $pr | cut -f 1)
-	# $1に--rebaseなど適宜
-	gh pr merge $num --delete-branch $1
+	local prs=$(gh pr list $1 $2 | fzf --multi)
+	local nums=$(echo $prs | cut -f 1)
+	if [ -z "$nums" ]; then
+		echo "Canceled."
+		return 1
+	fi
+	echo $nums | while read num; do
+		gh pr merge $num --delete-branch --rebase
+	done
 	git pull --rebase --prune
 }
 

@@ -153,9 +153,15 @@ function gh-repo-fork
 end
 
 function gh-pr-merge
-	set pullrequest (gh pr list | peco --select-1)
-	set number (echo $pullrequest | cut -f 1)
-	gh pr merge $number -r -d
+	set pullrequests (gh pr list | fzf --multi)
+	set numbers (echo $pullrequests | cut -f 1)
+	if test -z "$numbers"
+		echo "Canceled."
+		return 1
+	end
+	echo $numbers | while read number
+		gh pr merge $number --delete-branch --rebase
+	end
 	git pull --rebase --prune
 end
 
