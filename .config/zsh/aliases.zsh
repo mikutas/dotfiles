@@ -74,19 +74,30 @@ function gh-pr-merge() {
 
 function gh-ready-approve() {
 	# 主に-l labelする用
-	local pr=$(gh pr list $1 $2 | peco --select-1)
-	local num=$(echo $pr | cut -f 1)
-	if [ -z "$num" ]; then
+	local prs=$(gh pr list $1 $2 | fzf --multi)
+	local nums=$(echo $prs | cut -f 1)
+	if [ -z "$nums" ]; then
 		echo "Canceled."
 		return 1
 	fi
-	gh pr ready $num
-	gh pr review --approve $num
+	echo $nums | while read num; do
+		gh pr ready $num
+		gh pr review --approve $num
+	done
 	read "merge?merge? (y/n)>"
 	if [[ $merge = "y" ]] then
-		gh pr merge $num --delete-branch
-		git pull --rebase --prune
+		read "method?method? (merge/rebase/squash)>"
+		echo $nums | while read num; do
+			if [[ $method = "merge" ]] then
+				gh pr merge $num --delete-branch --merge
+			elif [[ $method = "rebase" ]] then
+				gh pr merge $num --delete-branch --rebase
+			elif [[ $method = "squash" ]] then
+				gh pr merge $num --delete-branch --squash
+			fi
+		done
 	fi
+	git pull --rebase --prune
 }
 
 # go
