@@ -19,7 +19,7 @@ packages:
   - name: bitwarden/clients@cli-v2025.11.0
   - name: casey/just@1.44.1
   - name: cert-manager/cmctl@v2.4.0
-  - name: cli/cli@v2.83.1
+  - name: cli/cli@v2.83.2
   - name: derailed/k9s@v0.50.16
   - name: direnv/direnv@v2.37.1
   - name: eksctl-io/eksctl@v0.220.0
