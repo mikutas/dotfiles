@@ -90,10 +90,10 @@ function gh-ready-approve() {
 		gh pr review --approve $num
 	done
 	read "merge?merge? (y/n)>"
-	if [[ $merge = "y" ]] then
+	if [[ $merge = "y" || $merge = "" ]] then
 		read "method?method? (merge/rebase/squash)>"
 		echo $nums | while read num; do
-			if [[ $method = "merge" ]] then
+			if [[ $method = "merge" || $method = "" ]] then
 				gh pr merge $num --delete-branch --merge
 			elif [[ $method = "rebase" ]] then
 				gh pr merge $num --delete-branch --rebase
