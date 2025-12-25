@@ -5,14 +5,7 @@
     "github>aquaproj/aqua-renovate-config:installer-script#2.9.0(aliases\\..*sh)",
     "github>mikutas/my-renovate-config"
   ],
-  "packageRules": [
-    {
-      "matchDepNames": [
-        "kubectl"
-      ],
-      "allowedVersions": "<=1.33"
-    }
-  ],
+  "packageRules": [],
   "recreateWhen": "always",
   "customManagers": [
     {
