@@ -14,7 +14,7 @@ packages:
   - name: argoproj/argo-rollouts@v1.8.3
   - name: argoproj/argo-workflows@v3.7.6
   - name: aws/amazon-ec2-instance-selector@v3.1.3
-  - name: aws/aws-cli@2.32.21
+  - name: aws/aws-cli@2.32.23
   - name: bahdotsh/wrkflw@v0.7.3
   - name: bitwarden/clients@cli-v2025.12.0
   - name: casey/just@1.45.0
