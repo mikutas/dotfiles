@@ -3,7 +3,7 @@
 # https://aquaproj.github.io/
 registries:
   - type: standard
-    ref: v4.451.1 # renovate: depName=aquaproj/aqua-registry
+    ref: v4.452.0 # renovate: depName=aquaproj/aqua-registry
 packages:
   - name: 99designs/aws-vault@v7.2.0
   - name: BurntSushi/ripgrep@15.1.0
@@ -39,6 +39,7 @@ packages:
   - name: jqlang/jq@jq-1.8.1
   - name: junegunn/fzf@v0.67.0
   - name: k3d-io/k3d@v5.8.3
+  - name: k8sgpt-ai/k8sgpt@v0.4.27
   - name: kubernetes-sigs/kind@v0.31.0
   - name: kubernetes-sigs/kustomize@kustomize/v5.8.0
   - name: kyverno/kyverno@v1.16.1
