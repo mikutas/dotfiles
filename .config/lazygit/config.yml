@@ -1,5 +1,8 @@
 reporting: "off"
 startuppopupversion: 1
+git:
+  pagers:
+    - pager: delta --dark --paging=never
 gui:
   theme:
     selectedLineBgColor:
