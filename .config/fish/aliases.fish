@@ -70,11 +70,11 @@ end
 
 # docker
 function docker-image-rm
-	set image (docker image ls | peco --select-1 --prompt='image>')
+	set image (docker image ls --format "table {{.Repository}}\t{{.Tag}}\t{{.ID}}\t{{.Size}}" | fzf --layout=reverse --prompt='image>')
 	if not string length -q $image
 		echo "Canceled."
 	else
-		set image_id (echo $image | sed 's/\s\{1,\}/ /g' | cut -d " " -f 3)
+		set image_id (echo $image | tr -s ' ' | cut -d ' ' -f 3)
 		docker image rm $image_id
 	end
 end

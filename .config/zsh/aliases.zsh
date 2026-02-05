@@ -27,14 +27,11 @@ function start-session() {
 
 # docker
 function docker-image-rm() {
-	local image=$(docker image ls | peco --select-1 --prompt='image>')
+	local image=$(docker image ls --format "table {{.Repository}}\t{{.Tag}}\t{{.ID}}\t{{.Size}}" | fzf --layout=reverse --prompt='image>')
 	if [[ $image = "" ]] then
 		echo "Canceled."
 	else
-		local image_id=$(echo $image | sed 's/\s\{1,\}/ /g' | cut -d " " -f 3)
-		if [[ $(uname) = "Darwin" ]] then
-			local image_id=$(echo $image | gsed 's/\s\{1,\}/ /g' | cut -d " " -f 3)
-		fi
+		local image_id=$(echo $image | tr -s ' ' | cut -d ' ' -f 3)
 		docker image rm $image_id
 	fi
 }
