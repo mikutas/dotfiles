@@ -60,7 +60,7 @@ packages:
   - name: sunny0826/kubecm@v0.34.0
   - name: suzuki-shunsuke/tfcmt@v4.14.14
   - name: terraform-docs/terraform-docs@v0.21.0
-  - name: terraform-linters/tflint@v0.60.0
+  - name: terraform-linters/tflint@v0.61.0
   - name: tfutils/tfenv@v3.0.0
   - name: tmccombs/hcl2json@v0.6.8
   - name: tsenart/vegeta@v12.13.0
