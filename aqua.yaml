@@ -43,7 +43,7 @@ packages:
   - name: kubernetes-sigs/kind@v0.31.0
   - name: kubernetes-sigs/kustomize@kustomize/v5.8.0
   - name: kyverno/kyverno@v1.16.3
-  - name: mikefarah/yq@v4.50.1
+  - name: mikefarah/yq@v4.52.4
   - name: norwoodj/helm-docs@v1.14.2
   - name: odigos-io/odigos@v1.17.2
   - name: ogham/exa@v0.10.1
