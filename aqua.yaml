@@ -64,5 +64,5 @@ packages:
   - name: tfutils/tfenv@v3.0.0
   - name: tmccombs/hcl2json@v0.6.8
   - name: tsenart/vegeta@v12.13.0
-  - name: x-motemen/ghq@v1.8.0
+  - name: x-motemen/ghq@v1.9.3
   - name: yannh/kubeconform@v0.7.0
