@@ -42,7 +42,7 @@ packages:
   - name: k8sgpt-ai/k8sgpt@v0.4.27
   - name: kubernetes-sigs/kind@v0.31.0
   - name: kubernetes-sigs/kustomize@kustomize/v5.8.1
-  - name: kyverno/kyverno@v1.16.3
+  - name: kyverno/kyverno@v1.17.0
   - name: mikefarah/yq@v4.52.4
   - name: norwoodj/helm-docs@v1.14.2
   - name: odigos-io/odigos@v1.17.4
