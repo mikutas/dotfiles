@@ -154,12 +154,13 @@ end
 
 function gh-pr-merge
 	set pullrequests (gh pr list | fzf --multi)
-	set numbers (echo $pullrequests | cut -f 1)
-	if test -z "$numbers"
+	if test -z "$pullrequests"
 		echo "Canceled."
 		return 1
 	end
-	echo $numbers | while read number
+	for pr in $pullrequests
+	    set number (echo $pr | cut -f 1)
+		echo $number
 		gh pr merge $number --delete-branch --rebase
 	end
 	git pull --rebase --prune
