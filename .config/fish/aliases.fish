@@ -160,7 +160,6 @@ function gh-pr-merge
 	end
 	for pr in $pullrequests
 	    set number (echo $pr | cut -f 1)
-		echo $number
 		gh pr merge $number --delete-branch --rebase
 	end
 	git pull --rebase --prune
