@@ -48,7 +48,7 @@ packages:
   - name: odigos-io/odigos@v1.17.5
   - name: ogham/exa@v0.10.1
   - name: pcasteran/terraform-graph-beautifier@v0.3.4
-  - name: protocolbuffers/protobuf/protoc@v21.12
+  - name: protocolbuffers/protobuf/protoc@v34.0
   - name: reviewdog/reviewdog@v0.21.0
   - name: robscott/kube-capacity@v0.8.0
   - name: sharkdp/bat@v0.26.1
