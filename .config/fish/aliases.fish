@@ -128,6 +128,15 @@ function lg -w 'lazygit'
 	lazygit $argv;
 end
 
+function wt
+	set destination (git worktree list | fzf | awk '{print $1}')
+	if test -z "$destination"
+		echo "Canceled."
+		return 1
+	end
+	cd $destination
+end
+
 # GitHub
 function gh-repo-fork
 	gh repo fork

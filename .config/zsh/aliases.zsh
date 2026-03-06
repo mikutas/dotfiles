@@ -54,6 +54,15 @@ alias rebase="git rebase"
 alias stash="git stash"
 alias lg="lazygit"
 
+function wt() {
+	destination=$(git worktree list | fzf | awk '{print $1}')
+	if [[ -z "$destination" ]] then
+		echo "Canceled."
+		return 1
+	fi
+	cd $destination
+}
+
 # GitHub CLI
 function gh-repo-fork() {
 	gh repo fork
