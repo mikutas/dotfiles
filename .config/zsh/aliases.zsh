@@ -9,6 +9,18 @@ function aqua-sort() {
 	yq e '.packages |= sort_by(.name)' -i aqua.yaml
 }
 
+# argocd
+function argocd-ctx() {
+  local selected
+  selected=$(
+    argocd context \
+      | tail -n +2 \
+      | fzf --prompt="Select Context> " \
+      | awk '{if ($1 == "*") print $2; else print $1}'
+  )
+  [[ -n "$selected" ]] && argocd context "$selected"
+}
+
 # aws
 # Macのみ
 function awsprof() {
