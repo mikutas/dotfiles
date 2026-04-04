@@ -11,7 +11,7 @@
     {
       "customType": "regex",
       "managerFilePatterns": [
-        "aliases\\..*sh"
+        "/aliases\\..*sh/"
       ],
       "matchStrings": [
         "renovate\\/renovate:(?<currentValue>.*?) sh"
