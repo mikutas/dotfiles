@@ -14,7 +14,7 @@
         "aliases\\..*sh"
       ],
       "matchStrings": [
-        "renovate\\/renovate:(?<currentValue>.*) sh"
+        "renovate\\/renovate:(?<currentValue>.*?) sh"
       ],
       "datasourceTemplate": "docker",
       "depNameTemplate": "renovate/renovate"
