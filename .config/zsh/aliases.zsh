@@ -10,15 +10,23 @@ function aqua-sort() {
 }
 
 # argocd
-function argocd-ctx() {
+function _argocd-select-ctx() {
+  argocd context \
+    | tail -n +2 \
+    | fzf --prompt="Select Context> " \
+    | awk '{if ($1 == "*") print $2; else print $1}'
+}
+
+function argocd-context() {
   local selected
-  selected=$(
-    argocd context \
-      | tail -n +2 \
-      | fzf --prompt="Select Context> " \
-      | awk '{if ($1 == "*") print $2; else print $1}'
-  )
+  selected=$(_argocd-select-ctx)
   [[ -n "$selected" ]] && argocd context "$selected"
+}
+
+function argocd-login() {
+  local selected
+  selected=$(_argocd-select-ctx)
+  [[ -n "$selected" ]] && argocd login --sso --grpc-web "$selected" "$@"
 }
 
 # aws
