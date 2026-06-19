@@ -1,11 +1,16 @@
-name: aqua
+name: test
 
 on: pull_request
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  aqua:
+    runs-on: ubuntu-slim
     steps:
       - uses: mikutas/my-aqua-installer@main
         with:
           aqua_opts: "-l=false" # disable lazy install
+
+  asdf:
+    runs-on: ubuntu-slim
+    steps:
+      - uses: asdf-vm/actions/install@v4
