@@ -29,6 +29,16 @@ function argocd-login() {
   [[ -n "$selected" ]] && argocd login --sso --grpc-web "$selected" "$@"
 }
 
+function argocd-login-all() {
+  local ctx
+  argocd context \
+    | tail -n +2 \
+    | awk '{if ($1 == "*") print $2; else print $1}' \
+    | while read -r ctx; do
+      [[ -n "$ctx" ]] && argocd login --sso --grpc-web "$ctx" "$@"
+    done
+}
+
 # aws
 # Macのみ
 function awsprof() {
