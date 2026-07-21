@@ -58,7 +58,7 @@ packages:
   - name: stern/stern@v1.34.0
   - name: sunny0826/kubecm@v0.35.1
   - name: suzuki-shunsuke/pinact@v4.1.0
-  - name: suzuki-shunsuke/tfcmt@v4.14.15
+  - name: suzuki-shunsuke/tfcmt@v4.14.17
   - name: terraform-docs/terraform-docs@v0.24.0
   - name: terraform-linters/tflint@v0.64.0
   - name: tfutils/tfenv@v3.2.2
