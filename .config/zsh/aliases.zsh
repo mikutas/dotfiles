@@ -185,7 +185,7 @@ function renovate() {
 }
 
 function renovate-config-validator() {
-	docker run --rm -it -v $(pwd):/usr/src/app renovate/renovate:43.271.2 sh -c "renovate-config-validator"
+	docker run --rm -it -v $(pwd):/usr/src/app renovate/renovate:43.271.2 sh -c "renovate-config-validator $@"
 }
 
 # Terraform
