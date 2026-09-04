@@ -59,3 +59,7 @@ fi
 if type "rbenv" > /dev/null 2>&1; then
 	eval "$(rbenv init - zsh)"
 fi
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/takumi.sue/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
