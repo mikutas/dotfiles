@@ -39,7 +39,7 @@ packages:
   - name: junegunn/fzf@v0.74.4
   - name: k3d-io/k3d@v5.9.0
   - name: kubernetes-sigs/kind@v0.33.0
-  - name: kubernetes-sigs/kustomize@kustomize/v5.8.1
+  - name: kubernetes-sigs/kustomize@kustomize/v5.8.2
   - name: kyverno/kyverno@v1.19.1
   - name: mikefarah/yq@v4.54.1
   - name: norwoodj/helm-docs@v1.14.2
