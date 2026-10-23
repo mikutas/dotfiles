@@ -53,7 +53,7 @@ packages:
   - name: sharkdp/pastel@v0.12.0
   - name: smallstep/cli@v0.31.0
   - name: starship/starship@v1.27.0
-  - name: stern/stern@v1.34.0
+  - name: stern/stern@v1.35.0
   - name: sunny0826/kubecm@v0.35.1
   - name: suzuki-shunsuke/pinact@v5.0.1
   - name: suzuki-shunsuke/tfcmt@v4.14.19
