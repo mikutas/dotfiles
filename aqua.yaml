@@ -58,7 +58,7 @@ packages:
   - name: suzuki-shunsuke/pinact@v5.0.0
   - name: suzuki-shunsuke/tfcmt@v4.14.19
   - name: terraform-docs/terraform-docs@v0.24.0
-  - name: terraform-linters/tflint@v0.64.0
+  - name: terraform-linters/tflint@v0.65.0
   - name: tfutils/tfenv@v3.2.2
   - name: tmccombs/hcl2json@v0.6.9
   - name: tsenart/vegeta@v12.13.0
