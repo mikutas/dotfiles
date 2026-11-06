@@ -56,7 +56,7 @@ packages:
   - name: smallstep/cli@v0.31.0
   - name: starship/starship@v1.27.0
   - name: stern/stern@v1.35.0
-  - name: sunny0826/kubecm@v0.35.1
+  - name: sunny0826/kubecm@v0.36.0
   - name: suzuki-shunsuke/pinact@v5.0.2
   - name: suzuki-shunsuke/tfcmt@v4.14.20
   - name: terraform-docs/terraform-docs@v0.24.0
