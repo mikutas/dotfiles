@@ -11,7 +11,7 @@ packages:
   - name: ahmetb/kubectx@v0.11.0
   - name: anchore/grype@v0.121.1
   - name: aquasecurity/trivy@v0.76.1
-  - name: argoproj/argo-cd@v3.6.0
+  - name: argoproj/argo-cd@v3.6.1
   - name: argoproj/argo-rollouts@v1.10.1
   - name: argoproj/argo-workflows@v4.1.6
   - name: aws/amazon-ec2-instance-selector@v3.1.3
