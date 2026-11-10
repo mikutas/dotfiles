@@ -44,7 +44,7 @@ packages:
   - name: kubernetes-sigs/kind@v0.33.0
   - name: kubernetes-sigs/kustomize@kustomize/v5.8.3
   - name: kyverno/kyverno@v1.19.2
-  - name: mikefarah/yq@v4.54.2
+  - name: mikefarah/yq@v4.54.3
   - name: norwoodj/helm-docs@v1.14.2
   - name: ogham/exa@v0.10.1
   - name: pcasteran/terraform-graph-beautifier@v0.3.4
