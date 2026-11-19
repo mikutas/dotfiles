@@ -67,7 +67,7 @@ function docker-image-rm() {
 }
 
 # eza
-alias ls="eza"
+[[ -n $CLAUDECODE ]] || alias ls="eza"
 
 # git
 alias add="git add"
